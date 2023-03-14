@@ -1,7 +1,128 @@
 body {
   margin: 0;
   font-family: system-ui;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Manrope', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Sono', sans-serif; // without last 4 strings it works
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #F5F5F5;
 }
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+
+  div {
+    button {
+      font-family: 'Sono';
+      font-weight: 400;
+      font-size: 20px;
+      cursor: pointer;
+      background-color: transparent;
+      border: 0;
+    }
+  }
+}
+
+.headerCenter {
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    width: 133px;
+    height: 44px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    transition: background 0.1s ease-in-out;
+
+    &:hover {
+      opacity: 50%;
+      background-color: #D6E9FF;
+      // background: darken($color: #D6E9FF, $amount: 50%);
+    }
+  }
+}
+
+.headerRight {
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+    width: 80px;
+    height: 40px;
+    border: 1px solid #C8EFDA;
+    cursor: pointer;
+
+    p {
+      font-family: 'Manrope';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 27px;
+      margin-right: 10px;
+    }
+  }
+}
+
+
+// header {
+//   text-align: center;
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+//   padding: 10px;
+// }
+
+// .headerLeft {
+//   flex: 1;
+// }
+
+// .headerCenter {
+//   flex: 2;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .headerCenter button {
+//   margin: 0 10px;
+// }
+
+// .headerRight {
+//   flex: 1;
+//   text-align: right;
+// }
