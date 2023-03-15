@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import './App.scss';
+import "./App.scss";
 
 function App() {
   return (
@@ -17,8 +17,18 @@ function App() {
           <div>
             <button>
               <p>RU</p>
-              <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 1L7.5 7L1 1" stroke="black" stroke-linecap="square" />
+              <svg
+                width="15"
+                height="8"
+                viewBox="0 0 15 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14 1L7.5 7L1 1"
+                  stroke="black"
+                  stroke-linecap="square"
+                />
               </svg>
             </button>
           </div>
