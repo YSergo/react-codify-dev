@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.scss";
 
 function App() {
@@ -5,8 +6,8 @@ function App() {
     <div className="app">
       <div className="overlay">
         {/* <div style={{ display: "none" }} className="overlay"> */}
-        <div className="drawer">
-          <div className="drawerTop">
+        <div className="request-drawer">
+          <div className="request-drawer__top">
             <h2>Заявка</h2>
             <svg
               width="24"
@@ -20,8 +21,8 @@ function App() {
             </svg>
           </div>
 
-          <div className="submitForm">
-            <p>
+          <div className="contact-form">
+            <p className="first-p">
               Оставьте свои
               <br />
               контактные данные
@@ -29,25 +30,28 @@ function App() {
             <input placeholder="Имя" />
             <input placeholder="Телефон" />
             <input placeholder="Эл. почта" />
-            <p>Какую задачу нужно решить?</p>
-            <input className="task-form" />
+            <p className="second-p">Какую задачу нужно решить?</p>
+            <textarea
+              className="request-input"
+              placeholder="Опишите задачу"
+            ></textarea>{" "}
             <button>Отправить</button>
           </div>
         </div>
       </div>
 
-      <header>
-        <div className="headerLeft">
+      <header className="header">
+        <nav className="header__left">
           <button>Codify.Software</button>
-        </div>
+        </nav>
 
-        <div className="headerCenter">
+        <nav className="header__center">
           <button>О нас</button>
           <button>Услуги</button>
           <button>Портфолио</button>
-        </div>
+        </nav>
 
-        <div className="headerRight">
+        <nav className="header__right">
           <button>
             <p>RU</p>
             <svg
@@ -64,12 +68,12 @@ function App() {
               />
             </svg>
           </button>
-        </div>
+        </nav>
       </header>
 
-      <div className="content">
-        <div className="mainPageWrapper">
-          <div className="mainPage">
+      <main className="main">
+        <section className="main__wrapper">
+          <div className="main__content">
             <h1>
               Дизайн и разработка
               {"\n"}
@@ -77,8 +81,8 @@ function App() {
             </h1>
             <button>Заказать проект</button>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   );
 }

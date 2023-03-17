@@ -1,9 +1,16 @@
+// Переменные цветов
+$color-background: #f5f5f5;
+$color-primary: #c8efda;
+$color-hover: #d6e9ff;
+$color-text: #242424;
+$color-placeholder: #c9c9c9;
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f5f5f5;
+  background: $color-background;
 }
 
 * {
@@ -25,13 +32,13 @@ li {
   list-style-type: none;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
 
-  .headerLeft {
+  &__left {
     button {
       font-family: "Sono";
       font-weight: 400;
@@ -43,7 +50,7 @@ header {
     }
   }
 
-  .headerCenter {
+  &__center {
     display: flex;
     justify-content: space-around;
 
@@ -65,13 +72,12 @@ header {
 
       &:hover {
         opacity: 50%;
-        background-color: #d6e9ff;
-        // background: darken($color: #D6E9FF, $amount: 50%);
+        background-color: $color-hover;
       }
     }
   }
 
-  .headerRight {
+  &__right {
     button {
       display: flex;
       align-items: center;
@@ -94,39 +100,40 @@ header {
   }
 }
 
-.mainPageWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.main {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  button {
-    align-self: flex-start;
-    width: 279px;
-    height: 64px;
-    cursor: pointer;
-    background-color: #c8efda;
-    border: 0;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 38px;
-    transition: background 0.3s ease-in-out;
+    button {
+      align-self: flex-start;
+      width: 279px;
+      height: 64px;
+      cursor: pointer;
+      background-color: #c8efda;
+      border: 0;
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 38px;
+      transition: background 0.3s ease-in-out;
 
-    &:hover {
-      background-color: #d6e9ff;
-      // background: darken($color: #D6E9FF, $amount: 50%);
+      &:hover {
+        background-color: $color-hover;
+      }
     }
-  }
 
-  h1 {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 80px;
-    line-height: 110px;
-    white-space: pre-line;
+    h1 {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 80px;
+      line-height: 110px;
+      white-space: pre-line;
+    }
   }
 }
 
@@ -141,7 +148,7 @@ header {
   backdrop-filter: blur(5px);
 }
 
-.drawer {
+.request-drawer {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -152,18 +159,18 @@ header {
   background: #f5f5f5;
   padding: 15px;
 
-  .drawerTop {
+  .request-drawer__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: -3px;
 
     h2 {
       margin: 0;
       margin-left: 49px;
       display: flex;
-      align-items: center;
       font-family: "Montserrat";
       font-style: normal;
       font-weight: 700;
@@ -186,7 +193,7 @@ header {
   }
 }
 
-.submitForm {
+.contact-form {
   height: 560px;
   width: 440px;
   background: #ffffff;
@@ -194,6 +201,8 @@ header {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  padding-top: 3px;
+
 
   input {
     width: 398px;
@@ -204,17 +213,29 @@ header {
     font-size: 20px;
     line-height: 30px;
     padding: 10px;
-    border: 1px solid #242424;
+    border: 1px solid $color-text;
 
     &::placeholder {
-      color: #C9C9C9;
+      color: $color-placeholder;
     }
-    
   }
 
-  .task-form {
+  .request-input {
     width: 398px;
     height: 200px;
+    margin-bottom: 20px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px;
+    border: 1px solid $color-text;
+    resize: none;
+  
+    &::placeholder {
+      color: $color-placeholder;
+    }
   }
 
   p {
@@ -240,11 +261,25 @@ header {
     background-color: #c8efda;
     border: 0;
     align-self: flex-start;
-
     transition: background 0.3s ease-in-out;
 
     &:hover {
-      background-color: #d6e9ff;
+      background-color: $color-hover;
     }
+  }
+}
+
+.contact-form {
+  
+  .second-p {
+    margin-bottom: 17px;
+  }
+  p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  input {
+    margin-top: 7px;
+    margin-bottom: 7px;
   }
 }
