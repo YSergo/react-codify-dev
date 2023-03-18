@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 .overlay {
   position: absolute;
@@ -9,8 +9,17 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
   backdrop-filter: blur(5px);
+  visibility: hidden;
+  //anim:
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+//
 .requestDrawer {
   align-items: center;
   display: flex;
@@ -66,7 +75,6 @@
   padding: 20px;
   padding-top: 3px;
 
-
   input {
     width: 398px;
     height: 47px;
@@ -95,7 +103,7 @@
     padding: 10px;
     border: 1px solid $color-text;
     resize: none;
-  
+
     &::placeholder {
       color: $color-placeholder;
     }
@@ -133,7 +141,6 @@
 }
 
 .contactForm {
-  
   .secondP {
     margin-bottom: 17px;
   }

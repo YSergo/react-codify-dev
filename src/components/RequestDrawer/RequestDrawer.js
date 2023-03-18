@@ -1,12 +1,37 @@
-import styles from './RequestDrawer.module.scss';
+import React from "react";
+import styles from "./RequestDrawer.module.scss";
 
-function RequestDrawer() {
+function RequestDrawer({ onClose, isOpen }) {
+  
+  React.useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
   return (
-    <div className={styles.overlay}>
-      <div className={styles.requestDrawer}>
+    <div
+      onClick={onClose}
+      className={`${styles.overlay} ${isOpen ? styles.visible : ""}`}
+    >
+      <div
+        onClick={(event) => event.stopPropagation()}
+        className={`${styles.requestDrawer} ${isOpen ? styles.opened : ""}`}
+      >
         <div className={styles.requestDrawerTop}>
           <h2>Заявка</h2>
           <svg
+            onClick={onClose}
             width="24"
             height="24"
             viewBox="0 0 28 28"
