@@ -1,6 +1,30 @@
-import styles from './Header.module.scss';
+import { useState } from "react";
+import styles from "./Header.module.scss";
 
 function Header() {
+  const [language, setLanguage] = useState("EN");
+  const [animation, setAnimation] = useState("");
+  const [svgAnimation, setSvgAnimation] = useState("");
+
+  const switchLanguage = () => {
+    setAnimation("blur-out");
+    setSvgAnimation("move-down");
+
+    setTimeout(() => {
+      setLanguage((prevLanguage) => (prevLanguage === "EN" ? "RU" : "EN"));
+      setAnimation("blur-in");
+    }, 300);
+
+    setTimeout(() => {
+      setSvgAnimation("move-up");
+    }, 600);
+
+    setTimeout(() => {
+      setAnimation("");
+      setSvgAnimation("");
+    }, 1200);
+  };
+
   return (
     <header className={styles.header}>
       <nav className={styles.headerLeft}>
@@ -12,10 +36,12 @@ function Header() {
         <button>Услуги</button>
         <button>Портфолио</button>
       </nav>
-
       <nav className={styles.headerRight}>
-        <button>
-          <p>RU</p>
+        <button
+          onClick={switchLanguage}
+          className={`${styles[animation]} ${styles[svgAnimation]}`}
+        >
+          <p>{language}</p>
           <svg
             width="15"
             height="8"
