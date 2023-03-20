@@ -1,0 +1,37 @@
+
+@import "../../variables.scss";
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    align-self: flex-start;
+    width: 279px;
+    height: 64px;
+    cursor: pointer;
+    background-color: $color-primary;
+    border: 0;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $color-hover;
+    }
+  }
+
+  h1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 110px;
+    white-space: pre-line;
+  }
+}

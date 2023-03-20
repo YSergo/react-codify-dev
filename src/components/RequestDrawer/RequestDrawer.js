@@ -1,9 +1,9 @@
-import React from "react";
+import { useEffect } from "react";
 import styles from "./RequestDrawer.module.scss";
+import Request from "../Request/Request";
 
 function RequestDrawer({ onClose, isOpen }) {
-  
-  React.useEffect(() => {
+  useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
         onClose();
@@ -42,23 +42,7 @@ function RequestDrawer({ onClose, isOpen }) {
             <path d="M2 2L26 26" stroke="black" strokeWidth="3" />
           </svg>
         </div>
-
-        <div className={styles.contactForm}>
-          <p className={styles.firstP}>
-            Оставьте свои
-            <br />
-            контактные данные
-          </p>
-          <input placeholder="Имя" />
-          <input placeholder="Телефон" />
-          <input placeholder="Эл. почта" />
-          <p className={styles.secondP}>Какую задачу нужно решить?</p>
-          <textarea
-            className={styles.requestInput}
-            placeholder="Опишите задачу"
-          ></textarea>{" "}
-          <button>Отправить</button>
-        </div>
+        <Request />
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
 
 function Header() {
@@ -28,13 +29,21 @@ function Header() {
   return (
     <header className={styles.header}>
       <nav className={styles.headerLeft}>
-        <button>Codify.Software</button>
+        <Link to="/">
+          <button>Codify.Software</button>
+        </Link>
       </nav>
 
       <nav className={styles.headerCenter}>
-        <button>О нас</button>
-        <button>Услуги</button>
-        <button>Портфолио</button>
+        <button>
+          <Link to="/About">О нас</Link>
+        </button>
+        <button>
+          <Link to="/About">Услуги</Link>
+        </button>
+        <button>
+          <Link to="/About">Портфолио</Link>
+        </button>
       </nav>
       <nav className={styles.headerRight}>
         <button

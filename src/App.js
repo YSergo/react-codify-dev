@@ -1,14 +1,16 @@
-import React from "react";
+import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 // import "./App.scss";
 import RequestDrawer from "./components/RequestDrawer/RequestDrawer";
 import Header from "./components/Header/Header"; // if u have index.js in it u can use just /Header
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
 
 function App() {
-  const [requestDrawerOpened, setRequestDrawerOpened] = React.useState(false);
+  const [requestDrawerOpened, setRequestDrawerOpened] = useState(false);
 
   return (
     <div className="app">
-      
       <RequestDrawer
         onClose={() => setRequestDrawerOpened(false)}
         isOpen={requestDrawerOpened}
@@ -16,18 +18,14 @@ function App() {
 
       <Header />
 
-      <main className="homePage">
-        <div>
-          <h1>
-            Дизайн и разработка
-            {"\n"}
-            интерфейсов
-          </h1>
-          <button onClick={() => setRequestDrawerOpened(true)}>
-            Заказать проект
-          </button>
-        </div>
-      </main>
+      <Routes>
+        <Route
+          path="/"
+          element={<Home setRequestDrawerOpened={setRequestDrawerOpened} />}
+        />
+
+        <Route path="/About" element={<About />} />
+      </Routes>
     </div>
   );
 }
