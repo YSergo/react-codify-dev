@@ -1,6 +1,6 @@
 import styles from "./Home.module.scss";
 
-function Home({setRequestDrawerOpened}) {
+function Home({setDrawerOpened}) {
   return (
     <main className={styles.homePage}>
       <div>
@@ -9,7 +9,7 @@ function Home({setRequestDrawerOpened}) {
           {"\n"}
           интерфейсов
         </h1>
-        <button onClick={() => setRequestDrawerOpened(true)}>
+        <button onClick={() => setDrawerOpened(true)}>
           Заказать проект
         </button>
       </div>
