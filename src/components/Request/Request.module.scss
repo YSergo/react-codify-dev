@@ -59,6 +59,11 @@
     &::placeholder {
       color: $color-placeholder;
     }
+
+    &:focus {
+      transition: border-color 0.6s ease-in-out;
+      border-color: $color-primary;
+    }
   }
 
   .requestInput {
@@ -77,6 +82,10 @@
     &::placeholder {
       color: $color-placeholder;
     }
+    &:focus {
+      transition: border-color 0.6s ease-in-out;
+      border-color: $color-primary;
+    }
   }
 
   p {
@@ -87,7 +96,6 @@
     line-height: 32px;
     margin: 0;
     align-self: flex-start;
-    // margin-bottom: 20px;
   }
 
   button {
@@ -122,4 +130,80 @@
     margin-top: 7px;
     margin-bottom: 7px;
   }
+}
+
+@keyframes inputErrorAnimation {
+  0%,
+  100% {
+    border-color: initial;
+    background-color: initial;
+  }
+  50% {
+    border-color: white;
+    background-color: rgba(241, 138, 138, 0.697);
+    color: white;
+  }
+}
+
+.errorInput {
+  animation: inputErrorAnimation 1.2s ease-in-out;
+}
+
+.sentRequest {
+  padding-top: 133px;
+  h3 {
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0;
+    margin-top: 40px;
+    animation: zoomIn 0.5s ease-in-out;
+  }
+  svg {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingIcon {
+  display: inline-block;
+  border: 15px solid rgba(0, 0, 0, 0.1);
+  border-left-color: $color-primary;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  animation: loading 1s linear infinite;
+  margin-top: 133px;
 }
