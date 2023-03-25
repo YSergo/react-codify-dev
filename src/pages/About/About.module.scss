@@ -29,13 +29,14 @@ h2 {
     }
   }
   p {
-    margin-left: 290px;
+    margin-left: 260px;
     font-family: "Manrope";
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 40px;
     color: #242424;
+    margin-bottom: 80px;
     &.leftAlign {
       margin-left: 0px;
       margin-bottom: 80px;
@@ -46,7 +47,10 @@ h2 {
 .ourTeam {
   margin-top: 40px;
   display: flex;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
+  justify-content: space-between;
+  align-items:flex-start;
+
   p {
     margin: 0;
     font-family: "Manrope";
@@ -55,11 +59,13 @@ h2 {
     font-size: 18px;
     line-height: 30px;
     color: #242424;
+    flex: 1;
   }
   .buttons {
     display: flex;
     flex-direction: column;
     margin-left: 40px;
+    margin-top: -9px;
 
     button {
       background: transparent;
@@ -82,13 +88,14 @@ h2 {
         background: #d6e9ff;
         background-color: $color-hover;
       }
-      &:focus {
+      &.selected {
         background-color: #c8efda;
         font-weight: 600;
       }
     }
   }
 }
+
 
 .memberCard {
   width: 220px;
@@ -107,15 +114,17 @@ h2 {
     height: 250px;
     object-fit: cover;
     overflow: hidden;
+    margin-bottom: 10px;
   }
 
-  p {
+  h6 {
     font-family: "Manrope";
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 30px;
     margin-top: auto;
+    margin-bottom: 5px;
   }
   span {
     font-family: "Manrope";
@@ -130,6 +139,7 @@ h2 {
 .principles {
   display: flex;
   flex-direction: column;
+  margin-bottom: 120px;
   h3,
   span {
     font-family: "Montserrat";
@@ -157,7 +167,7 @@ h2 {
       margin: 0px;
       margin-top: 5px;
       &:last-child {
-      margin-bottom: 40px;
+        margin-bottom: 40px;
       }
     }
   }
@@ -169,5 +179,51 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  li {
+    display: flex;
+    margin-bottom: 24px;
+    svg {
+      margin-right: 24px;
+      cursor: pointer;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+  h2 {
+    margin-top: 7px;
+    margin-bottom: 42px;
+  }
+  p {
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+footer {
+  margin-top: 280px;
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+  }
+  li {
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      color: $color-primary;
+    }
   }
 }

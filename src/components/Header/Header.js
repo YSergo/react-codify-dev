@@ -1,11 +1,15 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
 
 function Header() {
   const [language, setLanguage] = useState("EN");
   const [animation, setAnimation] = useState("");
   const [svgAnimation, setSvgAnimation] = useState("");
+
+  const location = useLocation();
+  const isSelected = (path) => location.pathname === path;
+
 
   const switchLanguage = () => {
     setAnimation("blur-out");
@@ -35,16 +39,16 @@ function Header() {
       </nav>
 
       <nav className={styles.headerCenter}>
-        <Link to="/About">
-          <button>О нас</button>
+      <Link to="/About">
+          <button className={isSelected('/About') ? styles.selected : ""}>О нас</button>
         </Link>
 
-        <Link to="/About">
-          <button>Услуги</button>
+        <Link to="/Services">
+          <button className={isSelected('/Services') ? styles.selected : ""}>Услуги</button>
         </Link>
 
-        <Link to="/About">
-          <button>Портфолио</button>
+        <Link to="/Portfolio">
+          <button className={isSelected('/Portfolio') ? styles.selected : ""}>Портфолио</button>
         </Link>
       </nav>
       <nav className={styles.headerRight}>

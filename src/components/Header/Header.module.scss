@@ -1,6 +1,5 @@
 @import "../../variables.scss";
 
-
 @keyframes moveDown {
   from {
     transform: translateY(0);
@@ -82,6 +81,9 @@
         opacity: 50%;
         background-color: $color-hover;
       }
+      &.selected {
+        background-color: $color-hover;
+      }
     }
   }
 
@@ -134,4 +136,3 @@
     }
   }
 }
-

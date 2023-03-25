@@ -119,7 +119,7 @@ function Request({ onClose, showCloseButton = false }) {
               fill="black"
             />
           </svg>
-          <h3>Отправлена.</h3>
+          <h4>Отправлена.</h4>
         </div>
       ) : sending ? (
         <div className={styles.contactForm}>
@@ -127,11 +127,11 @@ function Request({ onClose, showCloseButton = false }) {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className={styles.contactForm} noValidate>
-          <p className={styles.firstP}>
+          <h3 className={styles.firstP}>
             Оставьте свои
             <br />
             контактные данные
-          </p>
+          </h3>
 
           <input
             className={nameError ? styles.errorInput : ""}
@@ -159,7 +159,7 @@ function Request({ onClose, showCloseButton = false }) {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <p className={styles.secondP}>Какую задачу нужно решить?</p>
+          <h3 className={styles.secondP}>Какую задачу нужно решить?</h3>
           <textarea
             key={`request-${animationTrigger}`}
             className={`${styles.requestInput} ${
