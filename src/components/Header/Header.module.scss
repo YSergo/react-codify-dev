@@ -1,5 +1,46 @@
 @import "../../variables.scss";
 
+
+@keyframes moveDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(3px);
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(3px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes blurOut {
+  from {
+    opacity: 1;
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    filter: blur(4px);
+  }
+}
+
+@keyframes blurIn {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
 .header {
   display: flex;
   justify-content: space-around;
@@ -94,43 +135,3 @@
   }
 }
 
-
-@keyframes moveDown {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(3px);
-  }
-}
-
-@keyframes moveUp {
-  from {
-    transform: translateY(3px);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes blurOut {
-  from {
-    opacity: 1;
-    filter: blur(0);
-  }
-  to {
-    opacity: 0;
-    filter: blur(4px);
-  }
-}
-
-@keyframes blurIn {
-  from {
-    opacity: 0;
-    filter: blur(4px);
-  }
-  to {
-    opacity: 1;
-    filter: blur(0);
-  }
-}

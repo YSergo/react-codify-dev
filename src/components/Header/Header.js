@@ -35,15 +35,17 @@ function Header() {
       </nav>
 
       <nav className={styles.headerCenter}>
-        <button>
-          <Link to="/About">О нас</Link>
-        </button>
-        <button>
-          <Link to="/About">Услуги</Link>
-        </button>
-        <button>
-          <Link to="/About">Портфолио</Link>
-        </button>
+        <Link to="/About">
+          <button>О нас</button>
+        </Link>
+
+        <Link to="/About">
+          <button>Услуги</button>
+        </Link>
+
+        <Link to="/About">
+          <button>Портфолио</button>
+        </Link>
       </nav>
       <nav className={styles.headerRight}>
         <button
