@@ -10,7 +10,6 @@ function Header() {
   const location = useLocation();
   const isSelected = (path) => location.pathname === path;
 
-
   const switchLanguage = () => {
     setAnimation("blur-out");
     setSvgAnimation("move-down");
@@ -39,16 +38,22 @@ function Header() {
       </nav>
 
       <nav className={styles.headerCenter}>
-      <Link to="/About">
-          <button className={isSelected('/About') ? styles.selected : ""}>О нас</button>
+        <Link to="/About">
+          <button className={isSelected("/About") ? styles.selected : ""}>
+            О нас
+          </button>
         </Link>
 
         <Link to="/Services">
-          <button className={isSelected('/Services') ? styles.selected : ""}>Услуги</button>
+          <button className={isSelected("/Services") ? styles.selected : ""}>
+            Услуги
+          </button>
         </Link>
 
         <Link to="/Portfolio">
-          <button className={isSelected('/Portfolio') ? styles.selected : ""}>Портфолио</button>
+          <button className={isSelected("/Portfolio") ? styles.selected : ""}>
+            Портфолио
+          </button>
         </Link>
       </nav>
       <nav className={styles.headerRight}>

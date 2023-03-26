@@ -10,7 +10,6 @@
   z-index: 1;
   backdrop-filter: blur(5px);
   visibility: hidden;
-  //anim:
   opacity: 0;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
@@ -19,7 +18,7 @@
   visibility: visible;
   opacity: 1;
 }
-//
+
 .drawer {
   align-items: center;
   display: flex;

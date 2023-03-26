@@ -28,7 +28,7 @@ function Drawer({ onClose, isOpen }) {
         onClick={(event) => event.stopPropagation()}
         className={`${styles.drawer} ${isOpen ? styles.opened : ""}`}
       >
-        <Request onClose={onClose} showCloseButton = {true} />
+        <Request onClose={onClose} showCloseButton={true} />
       </div>
     </div>
   );
