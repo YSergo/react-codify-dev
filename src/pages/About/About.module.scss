@@ -184,30 +184,4 @@ h2 {
 .contacts {
   display: flex;
   justify-content: space-between;
-  li {
-    display: flex;
-    margin-bottom: 24px;
-    svg {
-      margin-right: 24px;
-      cursor: pointer;
-      transition: color 0.3s ease-in-out;
-
-      &:hover {
-        color: $color-primary;
-      }
-    }
-  }
-  h2 {
-    margin-top: 7px;
-    margin-bottom: 42px;
-    color: black;
-  }
-  p {
-    margin: 0;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
-    &:hover {
-      color: $color-primary;
-    }
-  }
 }

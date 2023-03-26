@@ -1,0 +1,92 @@
+@import "../../variables.scss";
+
+.wrapper {
+  margin-left: 260px;
+  margin-right: 260px;
+  margin-top: 60px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 120px;
+}
+.card {
+  width: 396px;
+  height: 203px;
+  background: #ffffff;
+  display: flex;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.06);
+    transform: translateY(-5px);
+  }
+
+  .hoverfill {
+    transition: fill 0.3s ease-in-out;
+  }
+  &:hover .hoverfill {
+    /* стили для path при наведении на карточку */
+    fill: $color-primary;
+  }
+
+  svg {
+    width: 201px;
+    height: 100%;
+    display: block;
+    top: 0;
+    right: 0;
+    position: absolute;
+    overflow: hidden;
+    margin: 0;
+  }
+}
+
+.info {
+  padding: 20px;
+  overflow: hidden;
+
+  h3 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    color: #242424;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #242424;
+    margin: 0;
+    margin-right: 60px;
+    margin-bottom: 20px;
+  }
+
+  span {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #242424;
+    margin: 0;
+  }
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+}

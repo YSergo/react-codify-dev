@@ -6,6 +6,7 @@ import Header from "./components/Header/Header"; // if u have index.js in it u c
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Footer from "./components/Footer/Footer";
+import Services from "./pages/Services/Services";
 
 function App() {
   const [DrawerOpened, setDrawerOpened] = useState(false);
@@ -41,6 +42,18 @@ function App() {
             />
           }
         />
+        <Route
+          path="/Services"
+          element={
+            <Services
+              handlePhoneClick={handlePhoneClick}
+              handleTelegramClick={handleTelegramClick}
+              handleEmailClick={handleEmailClick}
+              setDrawerOpened={setDrawerOpened}
+            />
+          }
+        ></Route>
+        <Route path="/Portfolio" element={<div>xyu</div>}></Route>
       </Routes>
       {!isHomePage && (
         <Footer
