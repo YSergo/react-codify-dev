@@ -1,0 +1,19 @@
+@import "../../variables.scss";
+
+footer {
+  padding-top: 280px;
+  margin-top: auto;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+  }
+  li {
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

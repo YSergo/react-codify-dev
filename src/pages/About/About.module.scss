@@ -211,19 +211,3 @@ h2 {
     }
   }
 }
-
-footer {
-  margin-top: 280px;
-  ul {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 40px;
-  }
-  li {
-    transition: color 0.3s ease-in-out;
-    cursor: pointer;
-    &:hover {
-      color: $color-primary;
-    }
-  }
-}

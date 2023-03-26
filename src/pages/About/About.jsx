@@ -3,20 +3,8 @@ import bo from "./bo.jpg";
 import Request from "../../components/Request/Request";
 import { useState } from "react";
 
-function About() {
+function About({ handlePhoneClick, handleTelegramClick, handleEmailClick }) {
   const [selectedMember, setSelectedMember] = useState("bt");
-
-  const handlePhoneClick = () => {
-    window.open("tel:+79215886202", "_blank");
-  };
-
-  const handleTelegramClick = () => {
-    window.open("https://t.me/iambogdan", "_blank");
-  };
-
-  const handleEmailClick = () => {
-    window.location.href = "mailto:codify.software@gmail.com";
-  };
 
   return (
     <div className={styles.wrapper}>
@@ -233,14 +221,6 @@ function About() {
           <Request />
         </div>
       </div>
-
-      <footer>
-        <ul>
-          <li onClick={handlePhoneClick}>+7 (921) 588-62-02</li>
-          <li onClick={handleTelegramClick}>@iambogdan</li>
-          <li onClick={handleEmailClick}>codify.software@gmail.com</li>
-        </ul>
-      </footer>
     </div>
   );
 }
