@@ -165,7 +165,7 @@ function Request({ onClose, showCloseButton = false }) {
             className={`${styles.requestInput} ${
               requestError ? styles.errorInput : ""
             }`}
-            placeholder="Текст должен содержать от 10 до 1000 символов"
+            placeholder="10 - 1000 символов"
             value={request}
             onChange={(e) => setRequest(e.target.value)}
             type="text'"

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
-// import "./App.scss";
+import "./App.scss";
 import Drawer from "./components/Drawer/Drawer";
 import Header from "./components/Header/Header"; // if u have index.js in it u can use just /Header
 import Home from "./pages/Home/Home";
