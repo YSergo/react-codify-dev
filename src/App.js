@@ -15,54 +15,20 @@ function App() {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
-  const handlePhoneClick = () => {
-    window.open("tel:+79215886202", "_blank");
-  };
-
-  const handleTelegramClick = () => {
-    window.open("https://t.me/iambogdan", "_blank");
-  };
-
-  const handleEmailClick = () => {
-    window.location.href = "mailto:codify.software@gmail.com";
-  };
-
   return (
     <div className="app">
       <Drawer onClose={() => setDrawerOpened(false)} isOpen={DrawerOpened} />
       <Header />
       <Routes>
         <Route path="/" element={<Home setDrawerOpened={setDrawerOpened} />} />
-        <Route
-          path="/About"
-          element={
-            <About
-              handlePhoneClick={handlePhoneClick}
-              handleTelegramClick={handleTelegramClick}
-              handleEmailClick={handleEmailClick}
-            />
-          }
-        />
+        <Route path="/About" element={<About />} />
         <Route
           path="/Services"
-          element={
-            <Services
-              handlePhoneClick={handlePhoneClick}
-              handleTelegramClick={handleTelegramClick}
-              handleEmailClick={handleEmailClick}
-              setDrawerOpened={setDrawerOpened}
-            />
-          }
+          element={<Services setDrawerOpened={setDrawerOpened} />}
         ></Route>
         <Route path="/Portfolio" element={<Portfolio />}></Route>
       </Routes>
-      {!isHomePage && (
-        <Footer
-          handlePhoneClick={handlePhoneClick}
-          handleTelegramClick={handleTelegramClick}
-          handleEmailClick={handleEmailClick}
-        />
-      )}
+      {!isHomePage && <Footer />}
     </div>
   );
 }

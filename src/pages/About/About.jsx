@@ -1,12 +1,12 @@
 import styles from "./About.module.scss";
 import bo from "./bo.jpg";
 import me from "./me.jpeg";
-import kris from './kris.jpg';
+import kris from "./kris.jpg";
 import Request from "../../components/Request/Request";
 import { useState } from "react";
 import Contacts from "../../components/Contacts/Contacts";
 
-function About({ handlePhoneClick, handleTelegramClick, handleEmailClick }) {
+function About() {
   const [selectedMember, setSelectedMember] = useState("sy");
 
   return (
@@ -161,11 +161,7 @@ function About({ handlePhoneClick, handleTelegramClick, handleEmailClick }) {
       </div>
 
       <div className={styles.contacts}>
-        <Contacts
-          handlePhoneClick={handlePhoneClick}
-          handleTelegramClick={handleTelegramClick}
-          handleEmailClick={handleEmailClick}
-        />
+        <Contacts />
 
         <div>
           <Request />

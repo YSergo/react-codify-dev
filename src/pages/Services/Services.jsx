@@ -1,13 +1,13 @@
 import styles from "./Services.module.scss";
 import Contacts from "../../components/Contacts/Contacts";
 import Request from "../../components/Request/Request";
-
-function Services({
+import {
   handlePhoneClick,
   handleTelegramClick,
   handleEmailClick,
-  setDrawerOpened,
-}) {
+} from "../../utils/contactHelpers";
+
+function Services({ setDrawerOpened }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
@@ -166,7 +166,6 @@ function Services({
             />
           </svg>
         </div>
-
       </div>
       <div className={styles.contacts}>
         <Contacts

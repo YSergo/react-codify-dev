@@ -1,5 +1,11 @@
 import styles from "./Contacts.module.scss";
-function Contacts({ handlePhoneClick, handleTelegramClick, handleEmailClick }) {
+import {
+  handlePhoneClick,
+  handleTelegramClick,
+  handleEmailClick,
+} from "../../utils/contactHelpers";
+
+function Contacts() {
   return (
     <div className={styles.contacts}>
       <h2>Контакты</h2>

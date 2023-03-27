@@ -1,5 +1,11 @@
-import styles from './Footer.module.scss'
-function Footer({ handlePhoneClick, handleTelegramClick, handleEmailClick }) {
+import styles from "./Footer.module.scss";
+import {
+  handlePhoneClick,
+  handleTelegramClick,
+  handleEmailClick,
+} from "../../utils/contactHelpers";
+
+function Footer() {
   return (
     <footer style={styles.footer}>
       <ul>
