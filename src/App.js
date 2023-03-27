@@ -7,6 +7,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Footer from "./components/Footer/Footer";
 import Services from "./pages/Services/Services";
+import Portfolio from "./pages/Portfolio/Portfolio";
 
 function App() {
   const [DrawerOpened, setDrawerOpened] = useState(false);
@@ -53,7 +54,7 @@ function App() {
             />
           }
         ></Route>
-        <Route path="/Portfolio" element={<div>xyu</div>}></Route>
+        <Route path="/Portfolio" element={<Portfolio />}></Route>
       </Routes>
       {!isHomePage && (
         <Footer
