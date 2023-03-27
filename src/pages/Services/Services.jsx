@@ -1,11 +1,6 @@
 import styles from "./Services.module.scss";
 import Contacts from "../../components/Contacts/Contacts";
 import Request from "../../components/Request/Request";
-import {
-  handlePhoneClick,
-  handleTelegramClick,
-  handleEmailClick,
-} from "../../utils/contactHelpers";
 
 function Services({ setDrawerOpened }) {
   return (
@@ -168,14 +163,8 @@ function Services({ setDrawerOpened }) {
         </div>
       </div>
       <div className={styles.contacts}>
-        <Contacts
-          handlePhoneClick={handlePhoneClick}
-          handleTelegramClick={handleTelegramClick}
-          handleEmailClick={handleEmailClick}
-        />
-        <div>
-          <Request />
-        </div>
+        <Contacts />
+        <Request />
       </div>
     </div>
   );

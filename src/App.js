@@ -10,21 +10,33 @@ import Services from "./pages/Services/Services";
 import Portfolio from "./pages/Portfolio/Portfolio";
 
 function App() {
-  const [DrawerOpened, setDrawerOpened] = useState(false);
+  const [drawerOpened, setDrawerOpened] = useState(false);
+
+  const setDrawerState = (state) => {
+    if (state) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "overlay";
+    }
+    setDrawerOpened(state);
+  };
 
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
   return (
     <div className="app">
-      <Drawer onClose={() => setDrawerOpened(false)} isOpen={DrawerOpened} />
+      <Drawer
+        onClose={() => setDrawerState(false)}
+        drawerOpened={drawerOpened}
+      />
       <Header />
       <Routes>
-        <Route path="/" element={<Home setDrawerOpened={setDrawerOpened} />} />
+        <Route path="/" element={<Home setDrawerOpened={setDrawerState} />} />
         <Route path="/About" element={<About />} />
         <Route
           path="/Services"
-          element={<Services setDrawerOpened={setDrawerOpened} />}
+          element={<Services setDrawerOpened={setDrawerState} />}
         ></Route>
         <Route path="/Portfolio" element={<Portfolio />}></Route>
       </Routes>

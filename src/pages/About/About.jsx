@@ -162,10 +162,7 @@ function About() {
 
       <div className={styles.contacts}>
         <Contacts />
-
-        <div>
-          <Request />
-        </div>
+        <Request />
       </div>
     </div>
   );
