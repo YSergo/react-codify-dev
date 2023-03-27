@@ -1,5 +1,7 @@
 import styles from "./About.module.scss";
 import bo from "./bo.jpg";
+import me from "./me.jpeg";
+import kris from './kris.jpg';
 import Request from "../../components/Request/Request";
 import { useState } from "react";
 import Contacts from "../../components/Contacts/Contacts";
@@ -51,7 +53,7 @@ function About({ handlePhoneClick, handleTelegramClick, handleEmailClick }) {
         {selectedMember === "sy" && (
           <>
             <div className={styles.memberCard}>
-              <img src={bo} alt="person" />
+              <img src={me} alt="person" />
               <h6>Сергей Якунчихин</h6>
               <span>
                 Co-founder <br />
@@ -67,7 +69,7 @@ function About({ handlePhoneClick, handleTelegramClick, handleEmailClick }) {
         {selectedMember === "kl" && (
           <>
             <div className={styles.memberCard}>
-              <img src={bo} alt="person" />
+              <img src={kris} alt="person" />
               <h6>Кристина Лаенко</h6>
               <span>
                 Co-founder
