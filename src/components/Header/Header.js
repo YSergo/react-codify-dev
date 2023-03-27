@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
 
 function Header() {
-  const [language, setLanguage] = useState("&#x1F610;");
+  const [language, setLanguage] = useState("0");
   const [animation, setAnimation] = useState("");
   const [svgAnimation, setSvgAnimation] = useState("");
 
@@ -15,7 +15,7 @@ function Header() {
     setSvgAnimation("move-down");
 
     setTimeout(() => {
-      setLanguage((prevLanguage) => (prevLanguage === "&#x1F610;" ? "&#x1F601;" : "&#x1F610;"));
+      setLanguage((prevLanguage) => (prevLanguage === "0" ? "1" : "0"));
       setAnimation("blur-in");
     }, 300);
 
@@ -61,7 +61,7 @@ function Header() {
           onClick={switchLanguage}
           className={`${styles[animation]} ${styles[svgAnimation]}`}
         >
-          <p dangerouslySetInnerHTML={{ __html: language }}></p>
+          <p>{language}</p>
           <svg
             width="15"
             height="8"
