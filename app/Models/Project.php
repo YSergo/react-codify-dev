@@ -18,5 +18,6 @@ class Project extends Model
         'title',
         'description',
         'link',
+        'url_to_project'
     ];
 }
