@@ -28,7 +28,7 @@ function Request({ onClose, showCloseButton = false }) {
       setNameError(false);
     }
 
-    const phoneRegex = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+    const phoneRegex = /^((8|\+7)[- ]?)?(\(?\d{3}\)?[- ]?)?[\d\- ]{7,10}$/;
     if (!phone || !phoneRegex.test(phone)) {
       setPhoneError(true);
       isValid = false;
@@ -74,7 +74,7 @@ function Request({ onClose, showCloseButton = false }) {
 
     try {
       const response = await axios.post(
-        "https://641a29baf398d7d95d51f32d.mockapi.io/input",
+        "https://codify.software/api/send-application",
         formData
       );
       console.log(response.data);

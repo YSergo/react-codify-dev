@@ -38,21 +38,21 @@ function Header() {
       </nav>
 
       <nav className={styles.headerCenter}>
-        <Link to="/About">
-          <button className={isSelected("/About") ? styles.selected : ""}>
-            О нас
+        <Link to="/about">
+          <button className={isSelected("/about") ? styles.selected : ""}>
+            <span>О нас</span>
           </button>
         </Link>
 
-        <Link to="/Services">
-          <button className={isSelected("/Services") ? styles.selected : ""}>
-            Услуги
+        <Link to="/services">
+          <button className={isSelected("/services") ? styles.selected : ""}>
+            <span>Услуги</span>
           </button>
         </Link>
 
-        <Link to="/Portfolio">
-          <button className={isSelected("/Portfolio") ? styles.selected : ""}>
-            Портфолио
+        <Link to="/portfolio">
+          <button className={isSelected("/portfolio") ? styles.selected : ""}>
+            <span>Портфолио</span>
           </button>
         </Link>
       </nav>

@@ -33,12 +33,12 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home setDrawerOpened={setDrawerState} />} />
-        <Route path="/About" element={<About />} />
+        <Route path="/about" element={<About />} />
         <Route
-          path="/Services"
+          path="/services"
           element={<Services setDrawerOpened={setDrawerState} />}
         ></Route>
-        <Route path="/Portfolio" element={<Portfolio />}></Route>
+        <Route path="/portfolio" element={<Portfolio />}></Route>
       </Routes>
       {!isHomePage && <Footer />}
     </div>

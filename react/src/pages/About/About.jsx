@@ -7,7 +7,7 @@ import { useState } from "react";
 import Contacts from "../../components/Contacts/Contacts";
 
 function About() {
-  const [selectedMember, setSelectedMember] = useState("sy");
+  const [selectedMember, setSelectedMember] = useState("bt");
 
   return (
     <div className={styles.wrapper}>
@@ -70,7 +70,7 @@ function About() {
           <>
             <div className={styles.memberCard}>
               <img src={kris} alt="person" />
-              <h6>Кристина Лаенко</h6>
+              <h6>Кристина Николаенко</h6>
               <span>
                 Co-founder
                 <br /> UX/UI Дизайнер

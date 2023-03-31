@@ -63,10 +63,13 @@
     justify-content: space-around;
     margin-right: 120px;
 
+    a {
+      margin: 10px;
+    }
+
     button {
       width: 133px;
       height: 44px;
-      margin: 10px;
       cursor: pointer;
       background-color: transparent;
       border: 0;
@@ -77,11 +80,16 @@
       line-height: 27px;
       text-align: center;
       transition: background 0.3s ease-in-out;
+      padding: 0;
 
       &:hover {
-        opacity: 50%;
-        background-color: $color-hover;
+        background-color: rgba($color-hover, 0.5);
       }
+
+      &:hover span {
+        opacity: 100%;
+      }
+
       &.selected {
         background-color: $color-hover;
       }
