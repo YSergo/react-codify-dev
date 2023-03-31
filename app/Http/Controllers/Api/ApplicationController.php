@@ -2,15 +2,26 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use http\Env\Request;
+use App\Notifications\SendNotification;
+use Illuminate\Http\Request;
 use App\Models\Application;
 
 class ApplicationController extends Controller
 {
-    public function handleApplication(Request $request)
+
+    public function handleApplication(Request $request): \Illuminate\Http\JsonResponse
     {
         $data = $request->except(['_token']);
-        $app = Application::create($data);
+
+        $result['name'] = $data['name'];
+        $result['tel'] = $data['phone'];
+        $result['email'] = $data['email'];
+        $result['task'] = $data['request'];
+
+
+        $app = Application::create($result);
+
+        $app->notify(new SendNotification($result));
 
         if($app) {
             return response()->json(['status' => true], options: JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
