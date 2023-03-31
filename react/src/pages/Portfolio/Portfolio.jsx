@@ -29,8 +29,8 @@ function Portfolio() {
               <path
                 d="M5.81836 14L20.3638 14"
                 stroke="black"
-                stroke-width="3"
-                stroke-linecap="square"
+                strokeWidth="3"
+                strokeLinecap="square"
               />
               <path
                 d="M12.1816 6H15.6833L23.9998 14L15.6833 22H12.1816L20.4981 14L12.1816 6Z"

@@ -27,7 +27,7 @@ function ServiceCard({ setDrawerOpened, title, description, price }) {
         <path
           d="M49 -1L135.5 72.5L1.5 227.5"
           stroke="#242424"
-          stroke-width="3"
+          strokeWidth="3"
         />
       </svg>
     </div>
