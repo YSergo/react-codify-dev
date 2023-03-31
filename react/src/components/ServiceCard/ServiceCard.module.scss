@@ -1,0 +1,77 @@
+@import "../../variables.scss";
+
+.card {
+  width: 100%;
+  height: 203px;
+  background: #ffffff;
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.06);
+    transform: translateY(-5px);
+  }
+
+  .hoverfill {
+    transition: fill 0.3s ease-in-out;
+  }
+  &:hover .hoverfill {
+    /* стили для path при наведении на карточку */
+    fill: $color-primary;
+  }
+
+  svg {
+    width: 201px;
+    height: 100%;
+    display: block;
+    top: 0;
+    right: 0;
+    position: absolute;
+    overflow: hidden;
+    margin: 0;
+  }
+}
+
+.info {
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 40px;
+    color: #242424;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #242424;
+    margin: 0;
+    margin-right: 98px;
+    margin-bottom: 0px;
+    flex: 1;
+  }
+
+  span {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    color: #242424;
+    margin: 0;
+  }
+}
