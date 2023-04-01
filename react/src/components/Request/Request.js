@@ -74,7 +74,7 @@ function Request({ onClose, showCloseButton = false }) {
 
     try {
       const response = await axios.post(
-        "https://codify.software/api/send-application",
+        "https://codify.software/api/send-application/",
         formData
       );
       console.log(response.data);
