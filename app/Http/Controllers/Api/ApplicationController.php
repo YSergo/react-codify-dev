@@ -11,7 +11,7 @@ class ApplicationController extends Controller
 
     public function handleApplication(Request $request): \Illuminate\Http\JsonResponse
     {
-        $data = $request->except(['_token']);
+        $data = $request->json()->all();
 
         $result['name'] = $data['name'];
         $result['tel'] = $data['phone'];
