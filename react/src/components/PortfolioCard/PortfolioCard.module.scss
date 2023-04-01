@@ -1,0 +1,79 @@
+@import '../../variables.scss';
+
+.card {
+  width: 405.5px;
+  height: 511px;
+  background: #ffffff;
+  padding: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 5px solid white;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+  &:hover {
+    border-color: $color-primary;
+    box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.06);
+    transform: translateY(-5px);
+  }
+
+  h1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 60px;
+    color: #000000;
+    margin: 0;
+    margin-top: 15px;
+  }
+
+  span {
+    flex: 1;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #565656;
+  }
+
+  button {
+    position: relative;
+    left: -6px;
+    padding: 7px;
+    width: 217px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #000000;
+    transition: background-color 0.3s ease-in-out;
+    transition: transform 0.15s ease-in-out;
+
+    &:hover {
+      background-color: $color-primary;
+    }
+    &:hover {
+      transform: translateX(6px);
+    }
+    &:disabled {
+      background-color: #ccc;
+      cursor:default;
+      width: 180px;
+      transform: none;
+      left: 0px;
+    }
+  }
+}
+
+

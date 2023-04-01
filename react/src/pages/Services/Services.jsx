@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function Services({ setDrawerOpened }) {
-  const [services, setServices] = useState([]);
+  const [favors, setFavors] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -14,9 +14,10 @@ function Services({ setDrawerOpened }) {
         const response = await axios.get(
           "https://codify.software/api/get-services/"
         );
-        setServices(response.data);
+        setFavors(response.data);
       } catch (error) {
         console.error("Ошибка при получении данных:", error);
+        alert(':C');
       }
     }
     
@@ -26,7 +27,7 @@ function Services({ setDrawerOpened }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        {services.map((item) => (
+        {favors.map((item) => (
           <ServiceCard
             key={item.id}
             title={item.title}
