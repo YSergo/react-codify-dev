@@ -11,8 +11,6 @@ function PorfolioCard({ title, description, image, url }) {
   const buttonText = isProjectAvailable ? "Смотреть проект" : "В разработке";
   const svgStyles = isProjectAvailable ? {} : { transform: "rotate(180deg)" };
 
-  console.log(url);
-
   return (
     <div className={styles.card}>
       <img src={image} alt="site" />
