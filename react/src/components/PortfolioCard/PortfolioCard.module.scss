@@ -1,15 +1,15 @@
 @import '../../variables.scss';
 
 .card {
-  width: 429px; 
-  height: 534px;
+  width: 405.5px;
+  height: 511px;
   background: #ffffff;
-  padding: 15px;
+  padding: 18px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
   border: 5px solid white;
-  box-sizing: border-box;
   transition: border-color 0.3s ease-in-out, box-shadow 0.2s ease-in-out,
     transform 0.2s ease-in-out;
   &:hover {
@@ -39,11 +39,10 @@
     color: #565656;
   }
 
-  
   button {
     position: relative;
+    left: -6px;
     padding: 7px;
-    left: -7px;
     width: 217px;
     height: 40px;
     display: flex;
@@ -68,13 +67,11 @@
       transform: translateX(6px);
     }
     &:disabled {
-      background-color: $color-primary;
-      cursor: default;
-      width: 170px;
+      background-color: #ccc;
+      cursor:default;
+      width: 180px;
       transform: none;
-      left: -20px;
-      padding: 20px;
-      z-index: 1;
+      left: 0px;
     }
   }
 }
