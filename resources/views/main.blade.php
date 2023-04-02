@@ -1,3 +1,25 @@
+@php
+    function findHashedFiles($directory, $filename) {
+        $hash = '';
+        if (is_dir($directory)) {
+            $files = scandir($directory);
+
+            foreach ($files as $file) {
+                if (preg_match("/^" . preg_quote($filename, '/') . "\.[a-f0-9]{8}\.(js|css)$/", $file, $matches)) {
+                    $hash = substr($file, strlen($filename) + 1, 8);
+                    break;
+                }
+            }
+        }
+
+        return $hash;
+    }
+
+    $cssDirectory = public_path('static/css');
+    $jsDirectory = public_path('static/js');
+    $cssHash = findHashedFiles($cssDirectory, 'main');
+    $jsHash = findHashedFiles($jsDirectory, 'main');
+@endphp
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,8 +36,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@200;300;400;500;600&family=Montserrat:wght@400;500;600;700;800&family=Sono:wght@200;300;400;500;600&display=swap"
           rel="stylesheet">
     <title>Codify.Software</title>
-    <script defer="defer" src="{{ asset('static/js/main.7939daa0.js') }}"></script>
-    <link href="{{ asset('static/css/main.df405275.css') }}" rel="stylesheet">
+    <script defer="defer" src="{{ asset('static/js/main. ' . $jsHash .'.js') }}"></script>
+    <link href="{{ asset('static/css/main. ' . $cssHash .'.css') }}" rel="stylesheet">
 </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
