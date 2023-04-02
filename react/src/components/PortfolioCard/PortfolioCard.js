@@ -18,7 +18,7 @@ function PorfolioCard({ title, description, image, url }) {
       <span>{description}</span>
       <button onClick={() => handleClick(url)} disabled={!isProjectAvailable}>
         {buttonText}
-        <svg
+        {isProjectAvailable ? <svg
           width="28"
           height="28"
           viewBox="0 0 28 28"
@@ -37,7 +37,7 @@ function PorfolioCard({ title, description, image, url }) {
             d="M12.1816 6H15.6833L23.9998 14L15.6833 22H12.1816L20.4981 14L12.1816 6Z"
             fill="black"
           />
-        </svg>
+        </svg> : null}
       </button>
     </div>
   );
