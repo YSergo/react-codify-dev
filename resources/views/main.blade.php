@@ -38,6 +38,7 @@
     <title>Codify.Software</title>
     <script defer="defer" src="{{ asset('static/js/main.' . $jsHash .'.js') }}"></script>
     <link href="{{ asset('static/css/main.' . $cssHash .'.css') }}" rel="stylesheet">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
