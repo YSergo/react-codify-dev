@@ -12,7 +12,7 @@ function Services({ setDrawerOpened }) {
     async function fetchData() {
       try {
         const response = await axios.get(
-          "https://codify.software/api/get-services/"
+          "https://codify.software/api/get-services"
         );
         setFavors(response.data);
       } catch (error) {
@@ -20,7 +20,7 @@ function Services({ setDrawerOpened }) {
         alert(':C');
       }
     }
-    
+
     fetchData();
   }, []);
 

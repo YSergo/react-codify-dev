@@ -12,7 +12,7 @@ function Portfolio() {
     async function fetchData() {
       try {
         const response = await axios.get(
-          "https://codify.software/api/get-projects/"
+          "https://codify.software/api/get-projects"
         );
         setProjects(response.data);
       } catch (error) {
