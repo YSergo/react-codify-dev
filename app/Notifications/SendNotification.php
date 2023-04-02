@@ -36,7 +36,7 @@ class SendNotification extends Notification
     /**
      * Get the mail representation of the notification.
      */
-    public function toTelegram(object $notifiable): MailMessage
+    public function toTelegram(object $notifiable)
     {
         $data = $this->content;
         return TelegramMessage::create()->to('-930943524')->content("Новая заявка. \n" . "Имя: " . $data['name'] . "\n" . "Тел. " . $data['tel'] . "\n" . "Email: " . $data['email'] . "\n" . "Задача: " . $data['task']);
