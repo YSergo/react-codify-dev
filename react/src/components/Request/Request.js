@@ -82,7 +82,7 @@ function Request({ onClose, showCloseButton = false }) {
       SetisSent(true);
     } catch (error) {
       console.error(error);
-      alert(':C');
+      alert(":C");
       setSending(false);
     }
   };

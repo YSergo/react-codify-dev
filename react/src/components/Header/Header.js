@@ -33,7 +33,19 @@ function Header() {
     <header className={styles.header}>
       <nav className={styles.headerLeft}>
         <Link to="/">
-          <button>Codify.Software</button>
+          <button>
+            Codify
+            <svg
+              width="3"
+              height="3"
+              viewBox="0 0 3 3"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="1.5" cy="1.5" r="1.5" fill="black" />
+            </svg>
+            Software
+          </button>
         </Link>
       </nav>
 
