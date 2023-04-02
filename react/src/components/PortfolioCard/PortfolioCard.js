@@ -9,7 +9,6 @@ function PorfolioCard({ title, description, image, url }) {
 
   const isProjectAvailable = url !== null;
   const buttonText = isProjectAvailable ? "Смотреть проект" : "В разработке";
-  const svgStyles = isProjectAvailable ? {} : { transform: "rotate(180deg)" };
 
   return (
     <div className={styles.card}>
@@ -24,7 +23,6 @@ function PorfolioCard({ title, description, image, url }) {
           viewBox="0 0 28 28"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          style={svgStyles}
         >
           <rect width="28" height="28" fill="#C8EFDA" />
           <path

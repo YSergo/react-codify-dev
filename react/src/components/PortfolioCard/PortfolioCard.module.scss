@@ -1,17 +1,18 @@
 @import '../../variables.scss';
 
 .card {
-  width: 429px; 
-  height: 534px;
+  width: auto; 
+  height: 554px;
   background: #ffffff;
-  padding: 15px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   position: relative;
-  border: 5px solid white;
+  border: 5px solid $color-background;
   box-sizing: border-box;
   transition: border-color 0.3s ease-in-out, box-shadow 0.2s ease-in-out,
     transform 0.2s ease-in-out;
+
   &:hover {
     border-color: $color-primary;
     box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.06);
@@ -22,7 +23,7 @@
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 40px;
     line-height: 60px;
     color: #000000;
     margin: 0;
@@ -34,7 +35,7 @@
     font-family: "Manrope";
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 30px;
     color: #565656;
   }
