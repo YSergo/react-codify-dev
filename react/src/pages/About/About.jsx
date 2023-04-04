@@ -163,8 +163,8 @@ function About() {
         </div>
       </div>
 
-      <div className={styles.contacts}>
-        <Contacts />
+      <div style={{ display: 'none' }}>
+      <Contacts />
         <Request />
       </div>
     </div>
