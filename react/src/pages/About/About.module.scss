@@ -11,7 +11,7 @@ h2 {
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
-  line-height: 40px;
+  line-height: 60px;
   color: #242424;
   margin: 0;
 }
@@ -20,13 +20,7 @@ h2 {
   display: flex;
   flex-direction: column;
   h2 {
-    &:first-child {
-      margin-bottom: 20px;
-    }
-
-    &.rightAlign {
-      text-align: right;
-    }
+    
   }
   p {
     margin-left: 260px;
@@ -192,6 +186,12 @@ h2 {
   justify-content: space-between;
 }
 
+
+
+
+
+
+
 @media (max-width: 767px) {
   html {
     font-size: 4vw;
@@ -246,6 +246,7 @@ h2 {
       margin-bottom: 2vh;
       text-align: center;
     }
+
     .buttons {
       margin-left: 0vw;
       margin-bottom: 2vh;

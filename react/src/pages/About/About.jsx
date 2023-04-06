@@ -12,8 +12,11 @@ function About() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.description}>
-        <h2>Мы — команда разработчиков</h2>
-        <h2 className={styles.rightAlign}> и дизайнеров,</h2>
+        <div className="container-1">
+          <h2 className="line-1">Мы — команда</h2>
+          <h2 className="line-2">разработчиков</h2>
+          <h2 className="line-3">и дизайнеров</h2>
+        </div>
         <p>
           которая специализируется на веб-разработке и имеет большой опыт в
           создании высококачественных продуктов для наших клиентов.
@@ -21,7 +24,10 @@ function About() {
       </div>
 
       <div className={styles.description}>
-        <h2>Мы считаем, что наша главная цель — </h2>
+        <div className="container-2">
+          <h2 className="line-4">Мы считаем, что наша</h2>
+          <h2 className="line-5">главная цель — </h2>
+        </div>
         <p className={styles.leftAlign}>
           помочь вашему бизнесу развиваться, <br />
           и поэтому мы всегда стремимся к креативным
@@ -163,8 +169,8 @@ function About() {
         </div>
       </div>
 
-      <div style={{ display: 'none' }}>
-      <Contacts />
+      <div style={{ display: "none" }}>
+        <Contacts />
         <Request />
       </div>
     </div>
