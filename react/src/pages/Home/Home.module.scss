@@ -46,7 +46,7 @@
   .homePage {
     margin-left: 5vw;
     margin-right: 5vw;
-    margin-top: 25vh;
+    margin-top: 20vh;
   
     button {
       align-self: flex-start;
@@ -57,11 +57,11 @@
       border: 0;
       font-family: "Manrope";
       padding: 6vw;
-      padding-top: 3vw;
-      padding-bottom: 3vw;
+      padding-top: 2vw;
+      padding-bottom: 2vw;
       font-style: normal;
       font-weight: 600;
-      font-size: 2rem;
+      font-size: 1.5rem;
       transition: background 0.3s ease-in-out;
   
       &:hover {
@@ -72,8 +72,8 @@
     h1 {
       font-family: "Montserrat";
       font-weight: 600;
-      font-size: 3rem;
-      line-height: 3.5rem;
+      font-size: 2.5rem;
+      line-height: 3.6rem;
       margin: 0;
       margin-bottom: 2rem;
     }

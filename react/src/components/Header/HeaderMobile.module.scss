@@ -1,5 +1,8 @@
 .headerMobile {
-  padding: 5%;
+  padding-top: 6%;
+  padding-bottom: 6%;
+  margin-left: 5vw;
+  margin-right: 5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,4 +29,5 @@
 .headerRight {
     background-color: transparent;
     border: 0;
+    padding: 0;
 }
