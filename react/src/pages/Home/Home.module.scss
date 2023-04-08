@@ -46,7 +46,7 @@
   .homePage {
     margin-left: 5vw;
     margin-right: 5vw;
-    margin-top: 15vh;
+    margin-top: 20vh;
   
     button {
       align-self: flex-start;
@@ -62,6 +62,7 @@
       font-style: normal;
       font-weight: 600;
       font-size: 1.5rem;
+      color: #000000 !important;
       transition: background 0.3s ease-in-out;
   
       &:hover {
