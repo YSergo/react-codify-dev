@@ -250,10 +250,6 @@
       height: 5vh;
       font-size: 1rem;
       padding: 3%;
-
-      &:focus {
-        border-color: $color-primary;
-      }
     }
 
     .requestInput {
@@ -261,10 +257,6 @@
       margin-bottom: 2vh;
       font-size: 1rem;
       padding: 3%;
-
-      &:focus {
-        border-color: $color-primary;
-      }
     }
 
     h3 {

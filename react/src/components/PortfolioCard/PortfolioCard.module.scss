@@ -84,13 +84,7 @@
     height: 125vw;
     padding: 4%;
     position: relative;
-    border: 0;
-
-    &:hover {
-      border-color: initial;
-      box-shadow: initial;
-      transform: initial;
-    }
+    border: 5px solid $color-background;
 
     h1 {
       font-size: 2.3rem;

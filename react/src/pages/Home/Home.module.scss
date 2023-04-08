@@ -63,11 +63,7 @@
       font-weight: 600;
       font-size: 1.5rem;
       color: #000000 !important;
-      transition: background-color 0.2s ease-in-out;
-  
-      &:active {
-        background-color: $color-hover;
-      }
+      transition: background-color 0.3s ease-in-out;
     }
   
     h1 {

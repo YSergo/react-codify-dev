@@ -79,16 +79,6 @@
   .card {
     width: 90vw;
     height: 23vh;
-
-    &:hover {
-      border-color: initial;
-      box-shadow: initial;
-      transform: initial;
-    }
-    
-    &:active .hoverfill { /* стили для path при наведении на карточку */
-      fill: $color-primary;
-    }
   
     svg {
       width: auto;
