@@ -17,3 +17,23 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media (max-width: 767px) {
+  .wrapper {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 4vh;
+  }
+
+  .content {
+    margin-bottom: 20vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(396px, 1fr));
+    grid-gap: 15vw;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

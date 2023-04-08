@@ -1,7 +1,7 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 .card {
-  width: auto; 
+  width: auto;
   height: 554px;
   background: #ffffff;
   padding: 20px;
@@ -40,7 +40,6 @@
     color: #565656;
   }
 
-  
   button {
     position: relative;
     padding: 7px;
@@ -80,4 +79,53 @@
   }
 }
 
+@media (max-width: 767px) {
+  .card {
+    width: 90vw;
+    height: 125vw;
+    padding: 4%;
+    position: relative;
+    border: 0;
 
+    h1 {
+      font-size: 2.3rem;
+      line-height: 3rem;
+      margin: 0;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+
+    span {
+      flex: 1;
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+
+    button {
+      position: relative;
+      padding: 6%;
+      padding-right: 0;
+      padding-left: 0;
+      left: 0;
+      width: 50vw;
+      white-space: nowrap;
+      height: 10vw;
+      border: 0;
+      font-size: 1rem;
+      line-height: 2rem;
+
+      svg {
+        width: 7vw;
+        height: 7vw;
+      }
+
+      &:disabled {
+        width: 35vw;
+        transform: none;
+        margin-left: 1.1vw;
+        padding: 6%;
+        z-index: 1;
+      }
+    }
+  }
+}
