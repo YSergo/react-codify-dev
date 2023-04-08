@@ -19,7 +19,6 @@
     transition: fill 0.3s ease-in-out;
   }
   &:hover .hoverfill {
-    /* стили для path при наведении на карточку */
     fill: $color-primary;
   }
 
@@ -80,6 +79,17 @@
   .card {
     width: 90vw;
     height: 23vh;
+
+    &:hover {
+      border-color: initial;
+      box-shadow: initial;
+      transform: initial;
+    }
+    
+    &:active .hoverfill { /* стили для path при наведении на карточку */
+      fill: $color-primary;
+    }
+  
     svg {
       width: auto;
       height: 100%;

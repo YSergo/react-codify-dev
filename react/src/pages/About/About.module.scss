@@ -49,6 +49,7 @@ h2 {
     line-height: 40px;
     color: #242424;
     margin-bottom: 80px;
+
     &.leftAlign {
       margin-left: 0px;
       margin-bottom: 80px;
@@ -65,6 +66,7 @@ h2 {
   .memberCardWrapper {
     display: flex;
   }
+
   .memberCard {
     width: 220px;
     height: 400px;
@@ -138,15 +140,18 @@ h2 {
       border-radius: 0px;
       margin-bottom: 10px;
       cursor: pointer;
-      transition: background 0.3s ease-in-out;
+      transition: background-color 0.3s ease-in-out;
+
       &:hover {
         background: #d6e9ff;
         background-color: $color-hover;
       }
+
       &.selected {
         background-color: #c8efda;
         font-weight: 600;
       }
+
       &:last-child {
         width: auto;
       }
@@ -332,6 +337,10 @@ h2 {
         height: auto;
         width: auto;
         margin-bottom: 1vh;
+
+        &:active {
+          background-color: $color-primary;
+        }
       }
     }
   }

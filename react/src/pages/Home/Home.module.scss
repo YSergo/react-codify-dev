@@ -22,7 +22,7 @@
     font-weight: 600;
     font-size: 28px;
     line-height: 38px;
-    transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 
     &:hover {
       background-color: $color-hover;
@@ -63,9 +63,9 @@
       font-weight: 600;
       font-size: 1.5rem;
       color: #000000 !important;
-      transition: background 0.3s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
   
-      &:hover {
+      &:active {
         background-color: $color-hover;
       }
     }
