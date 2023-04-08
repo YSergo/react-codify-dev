@@ -21,19 +21,21 @@ const HeaderMobile = () => {
           </button>
         </Link>
       </nav>
-      <button className={styles.headerRight}>
-        <svg
-          width="30"
-          height="18"
-          viewBox="0 0 30 18"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M30 1H0" stroke="black" />
-          <path d="M30 9L6 9" stroke="black" />
-          <path d="M30 17L0 17" stroke="black" />
-        </svg>
-      </button>
+      <Link to="/About">
+        <button className={styles.headerRight}>
+          <svg
+            width="30"
+            height="18"
+            viewBox="0 0 30 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M30 1H0" stroke="black" />
+            <path d="M30 9L6 9" stroke="black" />
+            <path d="M30 17L0 17" stroke="black" />
+          </svg>
+        </button>
+      </Link>
     </header>
   );
 };

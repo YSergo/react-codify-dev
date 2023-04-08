@@ -12,10 +12,10 @@ function About() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.description}>
-        <div className="container-1">
-          <h2 className="line-1">Мы — команда</h2>
-          <h2 className="line-2">разработчиков</h2>
-          <h2 className="line-3">и дизайнеров</h2>
+        <div className={styles.container1}>
+          <h2 className={styles.line1}>Мы — команда</h2>
+          <h2 className={styles.line2}>&nbsp;разработчиков</h2>
+          <h2 className={styles.line3}>и дизайнеров,</h2>
         </div>
         <p>
           которая специализируется на веб-разработке и имеет большой опыт в
@@ -24,9 +24,9 @@ function About() {
       </div>
 
       <div className={styles.description}>
-        <div className="container-2">
-          <h2 className="line-4">Мы считаем, что наша</h2>
-          <h2 className="line-5">главная цель — </h2>
+        <div className={styles.container2}>
+          <h2 className={styles.line4}>Мы считаем, что наша</h2>
+          <h2 className={styles.line5}>&nbsp;главная цель — </h2>
         </div>
         <p className={styles.leftAlign}>
           помочь вашему бизнесу развиваться, <br />
@@ -40,7 +40,7 @@ function About() {
       <h2>Наша команда</h2>
       <div className={styles.ourTeam}>
         {selectedMember === "bt" && (
-          <>
+          <div className={styles.memberCardWrapper}>
             <div className={styles.memberCard}>
               <img src={bo} alt="person" />
               <h6>Богдан Топоров</h6>
@@ -54,10 +54,10 @@ function About() {
               или приложения, гарантируя стабильность, эффективность и
               безопасность
             </p>
-          </>
+          </div>
         )}
         {selectedMember === "sy" && (
-          <>
+          <div className={styles.memberCardWrapper}>
             <div className={styles.memberCard}>
               <img src={me} alt="person" />
               <h6>Сергей Якунчихин</h6>
@@ -70,10 +70,10 @@ function About() {
               Тот, кто воплощает дизайн в код, обеспечивая интерактивность и
               функциональность вашего сайта или приложения
             </p>
-          </>
+          </div>
         )}
         {selectedMember === "kl" && (
-          <>
+          <div className={styles.memberCardWrapper}>
             <div className={styles.memberCard}>
               <img src={kris} alt="person" />
               <h6>Кристина Николаенко</h6>
@@ -86,7 +86,7 @@ function About() {
               Тот, кто создает визуальный стиль и интерфейс вашего продукта,
               делая его удобным и привлекательным для пользователей
             </p>
-          </>
+          </div>
         )}
         <div className={styles.buttons}>
           <button
@@ -117,9 +117,9 @@ function About() {
           <div>
             <h3>Бизнес-ориентированность</h3>
             <p>
-              В первую очередь думаем о бизнесе. Помогаем
+              В первую очередь думаем о бизнесе. 
               <br />
-              решить проблемы и поднять показатели.
+              Помогаем решить проблемы и поднять показатели.
             </p>
           </div>
         </div>
@@ -169,7 +169,7 @@ function About() {
         </div>
       </div>
 
-      <div style={{ display: "none" }}>
+      <div className={styles.contacts}>
         <Contacts />
         <Request />
       </div>
