@@ -72,7 +72,7 @@ function About() {
             </p>
           </div>
         )}
-        {selectedMember === "kl" && (
+        {/* {selectedMember === "kl" && (
           <div className={styles.memberCardWrapper}>
             <div className={styles.memberCard}>
               <img src={kris} alt="person" />
@@ -87,7 +87,7 @@ function About() {
               делая его удобным и привлекательным для пользователей
             </p>
           </div>
-        )}
+        )} */}
         <div className={styles.buttons}>
           <button
             className={selectedMember === "bt" ? styles.selected : ""}
@@ -101,12 +101,12 @@ function About() {
           >
             Front-end разработка
           </button>
-          <button
+          {/* <button
             className={selectedMember === "kl" ? styles.selected : ""}
             onClick={() => setSelectedMember("kl")}
           >
             UX/UI дизайн
-          </button>
+          </button> */}
         </div>
       </div>
 

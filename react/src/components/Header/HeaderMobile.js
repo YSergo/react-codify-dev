@@ -1,7 +1,7 @@
 import styles from "./HeaderMobile.module.scss";
 import { Link } from "react-router-dom";
 
-const HeaderMobile = () => {
+const HeaderMobile = ({ setDrawerOpened, setOrigin }) => {
   return (
     <header className={styles.headerMobile}>
       <nav className={styles.headerLeft}>
@@ -21,21 +21,25 @@ const HeaderMobile = () => {
           </button>
         </Link>
       </nav>
-      <Link to="/About">
-        <button className={styles.headerRight}>
-          <svg
-            width="30"
-            height="18"
-            viewBox="0 0 30 18"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M30 1H0" stroke="black" />
-            <path d="M30 9L6 9" stroke="black" />
-            <path d="M30 17L0 17" stroke="black" />
-          </svg>
-        </button>
-      </Link>
+      <button
+        onClick={() => {
+          setDrawerOpened(true);
+          setOrigin("HeaderMobile");
+        }}
+        className={styles.headerRight}
+      >
+        <svg
+          width="30"
+          height="22"
+          viewBox="0 0 30 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M30 1H0" stroke="black" />
+          <path d="M30 9L6 9" stroke="black" />
+          <path d="M30 17L0 17" stroke="black" />
+        </svg>
+      </button>
     </header>
   );
 };

@@ -12,15 +12,20 @@ import HeaderMobile from "./components/Header/HeaderMobile";
 
 function App() {
   const [drawerOpened, setDrawerOpened] = useState(false);
+  const [origin, setOrigin] = useState(null);
 
   const setDrawerState = (state) => {
     if (state) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "overlay";
+      setTimeout(() => {
+        setOrigin(null);
+      }, 300); // Время анимации Drawer в миллисекундах (0.3s)
     }
     setDrawerOpened(state);
   };
+  
 
   const location = useLocation();
   const isHomePage = location.pathname === "/";
@@ -44,8 +49,11 @@ function App() {
       <Drawer
         onClose={() => setDrawerState(false)}
         drawerOpened={drawerOpened}
+        origin={origin}
+        setOrigin={setOrigin}
+        setDrawerOpened={setDrawerState}
       />
-      {isMobile ? <HeaderMobile /> : <Header />}
+      {isMobile ? <HeaderMobile setDrawerOpened={setDrawerState} setOrigin={setOrigin}/> : <Header />}
       <Routes>
         <Route path="/" element={<Home setDrawerOpened={setDrawerState} />} />
         <Route path="/about" element={<About />} />

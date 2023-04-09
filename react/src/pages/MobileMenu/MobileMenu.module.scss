@@ -1,0 +1,116 @@
+@import "../../variables.scss";
+
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6%;
+  padding-bottom: 6%;
+  margin-left: 5vw;
+  margin-right: 5vw;
+
+  .headerLeft {
+    button {
+      font-family: "Sono";
+      font-weight: 400;
+      font-size: 1.32rem;
+      background-color: transparent;
+      border: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      color: #000000 !important;
+
+      svg {
+        margin-left: 1.5vw;
+        margin-right: 1.5vw;
+      }
+    }
+  }
+
+  .headerRight {
+    width: 7vw;
+    height: 7vw;
+    cursor: pointer;
+
+    path {
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover path {
+      stroke: #c8efda;
+    }
+  }
+}
+
+.content {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+
+  a {
+    margin: 2.6vw;
+  }
+
+  button {
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    transition: background-color 0.3s ease-in-out;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+
+    span {
+      padding-left: 10vw;
+      padding-right: 10vw;
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    &:hover {
+      background-color: rgba($color-hover, 0.5);
+    }
+
+    &:hover span {
+      opacity: 100%;
+    }
+
+    &.selected {
+      background-color: $color-hover;
+    }
+  }
+}
+
+.orderButton {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  background-color: $color-primary;
+  border: 0;
+  font-family: "Manrope";
+  padding: 6vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #000000 !important;
+  transition: background-color 0.3s ease-in-out;
+}

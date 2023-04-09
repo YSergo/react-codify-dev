@@ -63,6 +63,8 @@
     }
 
     svg {
+      width: 30px;
+      height: 30px;
       cursor: pointer;
 
       path {
@@ -221,18 +223,24 @@
 @media (max-width: 767px) {
   .request {
     .requestTop {
+      margin-top: 2.1vh;
       margin-bottom: 4vh;
 
       h2 {
         font-size: 2.3rem;
       }
       svg {
+        width: 7vw;
+        height: 7vw;
+        cursor: pointer;
+    
         path {
-          transition: none;
+          transition: all 0.3s ease-in-out;
+          stroke-width: 2;
         }
-
+    
         &:hover path {
-          stroke: initial;
+          stroke: #c8efda;
         }
       }
     }
