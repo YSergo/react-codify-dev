@@ -1,7 +1,7 @@
 import styles from "./About.module.scss";
 import bo from "./bo.jpg";
 import me from "./me.jpeg";
-import kris from "./kris.jpg";
+// import kris from "./kris.jpg";
 import Request from "../../components/Request/Request";
 import { useState } from "react";
 import Contacts from "../../components/Contacts/Contacts";

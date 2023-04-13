@@ -60,6 +60,7 @@
       font-weight: 700;
       font-size: 40px;
       color: black;
+      line-height: 1.5rem;
     }
 
     svg {
@@ -165,7 +166,7 @@
     background-color: #c8efda;
     border: 0;
     align-self: flex-start;
-    transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 
     &:hover {
       background-color: $color-hover;
@@ -223,8 +224,8 @@
 @media (max-width: 767px) {
   .request {
     .requestTop {
-      margin-top: 2.1vh;
-      margin-bottom: 4vh;
+      margin-top: 3vh;
+      margin-bottom: 5vh;
 
       h2 {
         font-size: 2.3rem;

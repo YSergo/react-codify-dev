@@ -94,7 +94,7 @@ function Request({ onClose, showCloseButton = false }) {
         {showCloseButton && (
           <svg
             onClick={onClose}
-            viewBox="0 0 28 28"
+            viewBox="0 1 28 28"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
