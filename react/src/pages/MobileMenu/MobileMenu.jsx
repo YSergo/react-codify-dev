@@ -1,7 +1,7 @@
 import styles from "./MobileMenu.module.scss";
 import { Link, useLocation } from "react-router-dom";
 
-function MobileMenu({ onClose, setDrawerOpened, setOrigin }) {
+function MobileMenu({ onClose, setDrawerOpened, setOrigin, setOpenedFromMenu }) {
   const location = useLocation();
   const isSelected = (path) => location.pathname === path;
   return (
@@ -68,6 +68,7 @@ function MobileMenu({ onClose, setDrawerOpened, setOrigin }) {
           onClick={() => {
             setOrigin("request");
             setDrawerOpened(true);
+            setOpenedFromMenu(true);
           }}
           className={styles.orderButton}
         >
