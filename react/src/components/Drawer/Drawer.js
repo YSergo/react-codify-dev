@@ -30,7 +30,9 @@ function Drawer({ onClose, drawerOpened, origin, setDrawerOpened, setOrigin }) {
         className={`${styles.drawer} ${drawerOpened ? styles.opened : ""}`}
       >
         {origin !== "HeaderMobile" ? (
-          <Request onClose={onClose} showCloseButton={true} />
+          <div className={styles.animateRequest} key={drawerOpened ? 'request' : 'request-closed'}>
+            <Request onClose={onClose} showCloseButton={true} />
+          </div>
         ) : (
           <MobileMenu
             onClose={onClose}

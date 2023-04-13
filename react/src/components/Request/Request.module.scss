@@ -60,7 +60,6 @@
       font-weight: 700;
       font-size: 40px;
       color: black;
-      line-height: 1.5rem;
     }
 
     svg {
@@ -225,10 +224,11 @@
   .request {
     .requestTop {
       margin-top: 3vh;
-      margin-bottom: 5vh;
+      margin-bottom: 4vh;
 
       h2 {
         font-size: 2.3rem;
+        line-height: 1.5rem;
       }
       svg {
         width: 7vw;

@@ -1,5 +1,22 @@
 @import "../../variables.scss";
 
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animateRequest {
+  animation-name: fadeInScale;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
 .overlay {
   position: fixed;
   left: 0;
@@ -33,20 +50,16 @@
   transition: transform 0.3s ease-in-out;
   overflow: auto;
 }
+
 .opened {
   transform: translateX(0);
 }
 
 @media (max-width: 767px) {
   .overlay {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-    backdrop-filter: blur(5px);
+    backdrop-filter: initial;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -71,6 +84,7 @@
     transition: transform 0.3s ease-in-out;
     overflow: auto;
   }
+
   .opened {
     transform: translateX(0);
   }

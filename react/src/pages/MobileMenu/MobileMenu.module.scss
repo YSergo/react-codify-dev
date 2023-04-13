@@ -4,6 +4,26 @@
   width: 100%;
 }
 
+//logo anim
+@keyframes dispersing {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.headerLeft button {
+  animation-name: dispersing;
+  animation-duration: 2s;
+  animation-delay: 0.3s; 
+  animation-fill-mode: both;
+}
+//
+
 .header {
   display: flex;
   justify-content: space-between;
