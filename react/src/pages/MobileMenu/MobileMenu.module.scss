@@ -59,9 +59,18 @@
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-left: 5vw;
   margin-right: 5vw;
+  height: 94vh;
 }
+.orderButton {
+  position: sticky;
+  bottom: 2vh;
+}
+
 
 .menu {
   display: flex;

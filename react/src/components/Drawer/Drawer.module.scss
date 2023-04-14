@@ -71,6 +71,7 @@
   }
   
   .drawer {
+    overflow-y: hidden !important;
     padding: 0;
     align-items: center;
     display: flex;

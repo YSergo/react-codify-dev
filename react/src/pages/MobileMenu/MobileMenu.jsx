@@ -1,7 +1,12 @@
 import styles from "./MobileMenu.module.scss";
 import { Link, useLocation } from "react-router-dom";
 
-function MobileMenu({ onClose, setDrawerOpened, setOrigin, setOpenedFromMenu }) {
+function MobileMenu({
+  onClose,
+  setDrawerOpened,
+  setOrigin,
+  setOpenedFromMenu,
+}) {
   const location = useLocation();
   const isSelected = (path) => location.pathname === path;
   return (
