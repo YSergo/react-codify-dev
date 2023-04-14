@@ -24,7 +24,7 @@ function App() {
       document.body.style.overflow = "overlay";
       setTimeout(() => {
         setOrigin(null);
-      }, 300); // Время анимации Drawer в миллисекундах (0.3s)
+      }, 300);
     }
     setDrawerOpened(state);
   };
