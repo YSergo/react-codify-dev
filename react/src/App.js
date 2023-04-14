@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import Services from "./pages/Services/Services";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import HeaderMobile from "./components/Header/HeaderMobile";
+import axios from "axios";
 
 function App() {
   const [drawerOpened, setDrawerOpened] = useState(false);
@@ -27,11 +28,10 @@ function App() {
     }
     setDrawerOpened(state);
   };
-  
 
   const location = useLocation();
   const isHomePage = location.pathname === "/";
-//mob
+  //mob
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const isMobile = windowWidth <= 767;
 
@@ -45,7 +45,52 @@ function App() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-//
+  //
+
+  const [favors, setFavors] = useState([]);
+  const [favorsLoading, setFavorsLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        setFavorsLoading(true);
+        const response = await axios.get(
+          "https://codify.software/api/get-services"
+        );
+        setFavors(response.data);
+        setFavorsLoading(false);
+      } catch (error) {
+        console.error("Ошибка при получении данных:", error);
+        alert(":C");
+        setFavorsLoading(false);
+      }
+    }
+
+    fetchData();
+  }, []);
+
+  const [projects, setProjects] = useState([]);
+  const [projectsLoading, setProjectsLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        setProjectsLoading(true);
+        const response = await axios.get(
+          "https://codify.software/api/get-projects"
+        );
+        setProjects(response.data);
+        setProjectsLoading(false);
+      } catch (error) {
+        console.error("Ошибка при получении данных:", error);
+        alert(":C");
+        setProjectsLoading(false);
+      }
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <div className="app">
       <Drawer
@@ -57,15 +102,30 @@ function App() {
         openedFromMenu={openedFromMenu}
         setOpenedFromMenu={setOpenedFromMenu}
       />
-      {isMobile ? <HeaderMobile setDrawerOpened={setDrawerState} setOrigin={setOrigin}/> : <Header />}
+      {isMobile ? (
+        <HeaderMobile setDrawerOpened={setDrawerState} setOrigin={setOrigin} />
+      ) : (
+        <Header />
+      )}
       <Routes>
         <Route path="/" element={<Home setDrawerOpened={setDrawerState} />} />
         <Route path="/about" element={<About />} />
         <Route
           path="/services"
-          element={<Services setDrawerOpened={setDrawerState} />}
+          element={
+            <Services
+              setDrawerOpened={setDrawerState}
+              favors={favors}
+              favorsLoading={favorsLoading}
+            />
+          }
         ></Route>
-        <Route path="/portfolio" element={<Portfolio />}></Route>
+        <Route
+          path="/portfolio"
+          element={
+            <Portfolio projects={projects} projectsLoading={projectsLoading} />
+          }
+        ></Route>
       </Routes>
       {!isMobile && !isHomePage && <Footer />}
     </div>

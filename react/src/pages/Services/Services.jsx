@@ -2,33 +2,9 @@ import styles from "./Services.module.scss";
 import Contacts from "../../components/Contacts/Contacts";
 import Request from "../../components/Request/Request";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
-import { useState, useEffect } from "react";
-import axios from "axios";
 import ContentLoader from "react-content-loader";
 
-function Services({ setDrawerOpened }) {
-  const [favors, setFavors] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        setLoading(true);
-        const response = await axios.get(
-          "https://codify.software/api/get-services"
-        );
-        setFavors(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error("Ошибка при получении данных:", error);
-        alert(":C");
-        setLoading(false);
-      }
-    }
-
-    fetchData();
-  }, []);
-
+function Services({ setDrawerOpened, favors, favorsLoading }) {
   const renderSkeletons = () => {
     const skeletons = [];
     for (let i = 0; i < 8; i++) {
@@ -52,7 +28,7 @@ function Services({ setDrawerOpened }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        {loading
+        {favorsLoading
           ? renderSkeletons()
           : favors.map((item) => (
               <ServiceCard
