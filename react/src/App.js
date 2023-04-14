@@ -117,13 +117,14 @@ function App() {
               setDrawerOpened={setDrawerState}
               favors={favors}
               favorsLoading={favorsLoading}
+              isMobile={isMobile}
             />
           }
         ></Route>
         <Route
           path="/portfolio"
           element={
-            <Portfolio projects={projects} projectsLoading={projectsLoading} />
+            <Portfolio projects={projects} projectsLoading={projectsLoading} isMobile={isMobile} />
           }
         ></Route>
       </Routes>

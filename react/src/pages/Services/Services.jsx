@@ -4,7 +4,7 @@ import Request from "../../components/Request/Request";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import ContentLoader from "react-content-loader";
 
-function Services({ setDrawerOpened, favors, favorsLoading }) {
+function Services({ setDrawerOpened, favors, favorsLoading, isMobile }) {
   const renderSkeletons = () => {
     const skeletons = [];
     for (let i = 0; i < 8; i++) {
@@ -25,11 +25,33 @@ function Services({ setDrawerOpened, favors, favorsLoading }) {
     return skeletons;
   };
 
+  const renderMobileSkeletons = () => {
+    const skeletons = [];
+    for (let i = 0; i < 8; i++) {
+      skeletons.push(
+        <ContentLoader
+          key={i}
+          speed={2}
+          width="90vw"
+          height="23vh"
+          viewBox="0 0 446 226"
+          backgroundColor="#f3f3f3"
+          foregroundColor="white"
+        >
+          <rect x="0" y="0" rx="0" ry="0" width="100%" height="100%" />
+        </ContentLoader>
+      );
+    }
+    return skeletons;
+  };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
         {favorsLoading
-          ? renderSkeletons()
+          ? isMobile
+            ? renderMobileSkeletons()
+            : renderSkeletons()
           : favors.map((item) => (
               <ServiceCard
                 key={item.id}
