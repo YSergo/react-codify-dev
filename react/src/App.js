@@ -13,6 +13,7 @@ import HeaderMobile from "./components/Header/HeaderMobile";
 function App() {
   const [drawerOpened, setDrawerOpened] = useState(false);
   const [origin, setOrigin] = useState(null);
+
   const [openedFromMenu, setOpenedFromMenu] = useState(false);
 
   const setDrawerState = (state) => {
