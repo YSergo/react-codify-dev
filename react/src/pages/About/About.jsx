@@ -3,11 +3,44 @@ import bo from "./bo.jpg";
 import me from "./me.jpeg";
 // import kris from "./kris.jpg";
 import Request from "../../components/Request/Request";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Contacts from "../../components/Contacts/Contacts";
+import slideInStyles from "./slideInFromLeft.module.scss";
 
 function About() {
   const [selectedMember, setSelectedMember] = useState("bt");
+
+  const [part1Visible, setPart1Visible] = useState(false);
+  const [part2Visible, setPart2Visible] = useState(false);
+  const [part3Visible, setPart3Visible] = useState(false);
+  const part1Ref = useRef(null);
+  const part2Ref = useRef(null);
+  const part3Ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === part1Ref.current) {
+            setPart1Visible(entry.isIntersecting);
+          } else if (entry.target === part2Ref.current) {
+            setPart2Visible(entry.isIntersecting);
+          } else if (entry.target === part3Ref.current) {
+            setPart3Visible(entry.isIntersecting);
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(part1Ref.current);
+    observer.observe(part2Ref.current);
+    observer.observe(part3Ref.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div className={styles.wrapper}>
@@ -110,21 +143,31 @@ function About() {
         </div>
       </div>
 
+      <h2 className={styles.principlesTitle}>Наши принципы</h2>
       <div className={styles.principles}>
-        <h2>Наши принципы</h2>
-        <div className={styles.part}>
+        <div
+          ref={part1Ref}
+          className={`${styles.part} ${
+            part1Visible ? slideInStyles.fadeIn : ""
+          }`}
+        >
           <span>01</span>
           <div>
             <h3>Бизнес-ориентированность</h3>
             <p>
-              В первую очередь думаем о бизнесе. 
+              В первую очередь думаем о бизнесе.
               <br />
               Помогаем решить проблемы и поднять показатели.
             </p>
           </div>
         </div>
 
-        <div className={`${styles.part} ${styles.part2}`}>
+        <div
+          ref={part2Ref}
+          className={`${styles.part} ${styles.part2} ${
+            part2Visible ? slideInStyles.fadeIn : ""
+          }`}
+        >
           <span>02</span>
           <div>
             <h3>Наблюдайте за прогрессом</h3>
@@ -136,7 +179,12 @@ function About() {
           </div>
         </div>
 
-        <div className={`${styles.part} ${styles.part3}`}>
+        <div
+          ref={part3Ref}
+          className={`${styles.part} ${styles.part3} ${
+            part3Visible ? slideInStyles.fadeIn : ""
+          }`}
+        >
           <div>
             <svg
               width="129"

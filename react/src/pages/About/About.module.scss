@@ -159,6 +159,10 @@ h2 {
   }
 }
 
+.principlesTitle {
+  margin-bottom: 60px;
+}
+
 .principles {
   display: flex;
   flex-direction: column;
@@ -172,9 +176,6 @@ h2 {
     line-height: 40px;
     color: #242424;
     margin: 0;
-  }
-  h2 {
-    margin-bottom: 60px;
   }
 
   .part {
@@ -341,7 +342,9 @@ h2 {
       }
     }
   }
-
+  .principlesTitle {
+    margin-bottom: 2vh;
+  }
   .principles {
     display: flex;
     flex-direction: column;
@@ -349,11 +352,10 @@ h2 {
     h3,
     span {
       font-size: 1.25rem;
-      font-weight: 700;
-      margin-left: 1vh;
     }
-    h2 {
-      margin-bottom: 2vh;
+
+    h3 {
+      margin-left: 2vw;
     }
 
     .part {
