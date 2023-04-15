@@ -32,8 +32,8 @@ function Portfolio({ projects, projectsLoading, isMobile }) {
         <ContentLoader
           key={i}
           speed={2}
-          width="90vw"
-          height="125vw"
+          width="22.5rem"
+          height="31.4rem"
           viewBox="0 0 443 554"
           backgroundColor="#f3f3f3"
           foregroundColor="white"

@@ -80,11 +80,11 @@
 
 @media (max-width: 767px) {
   .card {
-    width: 90vw;
-    height: 125vw;
-    padding: 4%;
+    width: 22.5rem;
+    height: 31.4rem;
+    padding: 3%;
     position: relative;
-    border: 5px solid $color-background;
+    border: 0.3rem solid $color-background;
 
     h1 {
       font-size: 2.3rem;
@@ -106,9 +106,9 @@
       padding-right: 0;
       padding-left: 0;
       left: 0;
-      width: 43vw;
+      width: 10.8rem;
       white-space: nowrap;
-      height: 10vw;
+      height: 2rem;
       border: 0;
       font-size: 1rem;
       line-height: 2rem;
@@ -119,15 +119,16 @@
       }
 
       svg {
-        width: 7vw;
-        height: 7vw;
+        width: 1.7rem;
+        height: 1.7rem;
       }
 
       &:disabled {
+        position:relative;
         background-color: $color-primary;
-        width: 35vw;
+        width: 8.8rem;
         transform: none;
-        margin-left: 1.1vw;
+        left: -0.66rem;
         padding: 6%;
         z-index: 1;
       }
