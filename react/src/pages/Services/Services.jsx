@@ -32,8 +32,8 @@ function Services({ setDrawerOpened, favors, favorsLoading, isMobile }) {
         <ContentLoader
           key={i}
           speed={2}
-          width="90vw"
-          height="23vh"
+          width="22.5rem"
+          height="12rem"
           viewBox="0 0 446 226"
           backgroundColor="#f3f3f3"
           foregroundColor="white"
