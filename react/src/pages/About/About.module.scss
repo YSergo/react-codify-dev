@@ -278,13 +278,13 @@ h2 {
   }
 
   .ourTeam {
-    margin-top: 3vh;
-    margin-bottom: 6vh;
+    margin-top: 1.4rem;
+    margin-bottom: 3rem;
     flex-direction: column-reverse;
 
     .memberCard {
-      width: 45vw;
-      height: 85vw;
+      width: 50%;
+      height: auto;
       background: #ffffff;
       display: flex;
       flex-direction: column;
@@ -292,18 +292,19 @@ h2 {
       align-self: center;
       flex-shrink: 0;
       margin: 0;
-      padding: 2.3vw;
+      padding: 2.5%;
 
       img {
         box-shadow: 0px 0px 4vw 1.2vw rgba(0, 0, 0, 0.1);
         width: auto;
-        height: 25vh;
-        margin-bottom: 2vh;
+        height: 12rem;
+        margin-bottom: 0.5rem;
       }
 
       h6 {
         font-size: 1.3rem;
-        margin-bottom: 1vh;
+        margin-bottom: 0.4rem;
+        line-height: 1.8rem;
       }
 
       span {
@@ -311,7 +312,7 @@ h2 {
         font-style: normal;
         font-weight: 400;
         font-size: 0.9rem;
-        line-height: 1.3rem;
+        line-height: 1.5rem;
         white-space: nowrap;
         color: #5f5f5f;
       }
@@ -321,27 +322,28 @@ h2 {
       margin: 0;
       font-size: 1rem;
       line-height: 1.6rem;
-      margin-bottom: 2vh;
-      margin-left: 5vw;
+      margin-bottom: 0vh;
+      margin-left: 1.2rem;
     }
 
     .buttons {
       margin-left: 0vw;
-      margin-bottom: 2vh;
+      margin-bottom: 1rem;
       align-items: flex-start;
 
       button {
         font-size: 1rem;
-        padding-left: 4vw;
-        padding-right: 4vw;
-        padding-top: 0.7vh;
-        padding-bottom: 0.7vh;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
         height: auto;
         width: auto;
-        margin-bottom: 1vh;
+        margin-bottom: 0.5rem;
       }
     }
   }
+  
   .principlesTitle {
     margin-bottom: 2vh;
   }

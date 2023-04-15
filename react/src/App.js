@@ -21,7 +21,7 @@ function App() {
     if (state) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "overlay";
+      document.body.style.overflow = "auto";
       setTimeout(() => {
         setOrigin(null);
       }, 300);
