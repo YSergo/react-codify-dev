@@ -21,12 +21,12 @@ function About() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.target === part1Ref.current) {
-            setPart1Visible(entry.isIntersecting);
-          } else if (entry.target === part2Ref.current) {
-            setPart2Visible(entry.isIntersecting);
-          } else if (entry.target === part3Ref.current) {
-            setPart3Visible(entry.isIntersecting);
+          if (entry.target === part1Ref.current && !part1Visible && entry.isIntersecting) {
+            setPart1Visible(true);
+          } else if (entry.target === part2Ref.current && !part2Visible && entry.isIntersecting) {
+            setPart2Visible(true);
+          } else if (entry.target === part3Ref.current && !part3Visible && entry.isIntersecting) {
+            setPart3Visible(true);
           }
         });
       },

@@ -85,6 +85,7 @@
     padding: 3%;
     position: relative;
     border: 0.3rem solid $color-background;
+    overflow: hidden;
 
     h1 {
       font-size: 2.3rem;
@@ -124,11 +125,12 @@
       }
 
       &:disabled {
-        position:relative;
+        position: absolute;
         background-color: $color-primary;
         width: 8.8rem;
         transform: none;
-        left: -0.66rem;
+        top: 27.3rem;
+        left: 0;
         padding: 6%;
         z-index: 1;
       }
