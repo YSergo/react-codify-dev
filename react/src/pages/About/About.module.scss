@@ -177,7 +177,9 @@ h2 {
     color: #242424;
     margin: 0;
   }
-
+  .partOpacity0 {
+    opacity: 0;
+  }
   .part {
     display: flex;
 
@@ -343,7 +345,7 @@ h2 {
       }
     }
   }
-  
+
   .principlesTitle {
     margin-bottom: 2vh;
   }
@@ -358,6 +360,10 @@ h2 {
 
     h3 {
       margin-left: 2vw;
+    }
+
+    .partOpacity0 {
+      opacity: 0;
     }
 
     .part {

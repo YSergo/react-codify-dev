@@ -147,7 +147,7 @@ function About() {
       <div className={styles.principles}>
         <div
           ref={part1Ref}
-          className={`${styles.part} ${
+          className={`${styles.partOpacity0} ${styles.part} ${
             part1Visible ? slideInStyles.fadeIn : ""
           }`}
         >
@@ -164,7 +164,7 @@ function About() {
 
         <div
           ref={part2Ref}
-          className={`${styles.part} ${styles.part2} ${
+          className={`${styles.partOpacity0} ${styles.part} ${styles.part2} ${
             part2Visible ? slideInStyles.fadeIn : ""
           }`}
         >
@@ -181,7 +181,7 @@ function About() {
 
         <div
           ref={part3Ref}
-          className={`${styles.part} ${styles.part3} ${
+          className={`${styles.partOpacity0} ${styles.part} ${styles.part3} ${
             part3Visible ? slideInStyles.fadeIn : ""
           }`}
         >
