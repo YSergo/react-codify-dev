@@ -8,7 +8,7 @@
 @keyframes dispersing {
   0% {
     opacity: 0;
-    transform: translateY(-10px) scale(0.9);
+    transform: translateY(-50px) scale(1);
   }
   100% {
     opacity: 1;
@@ -19,7 +19,7 @@
 .headerLeft button {
   animation-name: dispersing;
   animation-duration: 2s;
-  animation-delay: 0.3s; 
+  animation-delay: 0.1s; 
   animation-fill-mode: both;
 }
 //
@@ -53,8 +53,8 @@
   }
 
   .headerRight {
-    width: 7vw;
-    height: 7vw;
+    width: 1.9rem;
+    height: 1.9rem;
   }
 }
 
