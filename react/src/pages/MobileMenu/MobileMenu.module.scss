@@ -19,7 +19,7 @@
 .headerLeft button {
   animation-name: dispersing;
   animation-duration: 2s;
-  animation-delay: 0.1s; 
+  animation-delay: 0.1s;
   animation-fill-mode: both;
 }
 //
@@ -64,20 +64,15 @@
   justify-content: space-between;
   margin-left: 5vw;
   margin-right: 5vw;
-  height: 94vh;
+  height: 80vh;
 }
-.orderButton {
-  position: sticky;
-  bottom: 2vh;
-}
-
 
 .menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 66vh;
+  height: 63vh;
   width: 100%;
 
   a {
@@ -122,7 +117,6 @@
 .orderButton {
   width: 100%;
   height: auto;
-  cursor: pointer;
   background-color: $color-primary;
   border: 0;
   font-family: "Manrope";
@@ -133,5 +127,34 @@
   font-weight: 600;
   font-size: 1.8rem;
   color: #000000 !important;
-  transition: background-color 0.3s ease-in-out;
+}
+
+.footer {
+  margin-top: 1.5rem;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  li {
+    margin: 0;
+    padding: 0;
+    transition: color 0.3s ease-in-out;
+    font-size: 0.66rem;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0;
+
+    &:active {
+      color: $color-primary;
+    }
+  }
+}
+
+.positionBottom {
+  position: sticky;
+  bottom: 2vh;
 }

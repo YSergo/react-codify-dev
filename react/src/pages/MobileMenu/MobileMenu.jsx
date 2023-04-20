@@ -1,5 +1,10 @@
 import styles from "./MobileMenu.module.scss";
 import { Link, useLocation } from "react-router-dom";
+import {
+  handlePhoneClick,
+  handleTelegramClick,
+  handleEmailClick,
+} from "../../utils/contactHelpers";
 
 function MobileMenu({
   onClose,
@@ -69,7 +74,8 @@ function MobileMenu({
             </button>
           </Link>
         </nav>
-        <button
+       <div className={styles.positionBottom}> 
+       <button
           onClick={() => {
             setOrigin("request");
             setDrawerOpened(true);
@@ -79,6 +85,14 @@ function MobileMenu({
         >
           Заказать проект
         </button>
+        <footer className={styles.footer}>
+          <ul>
+            <li onClick={handlePhoneClick}>+7 (921) 588-62-02</li>
+            <li onClick={handleTelegramClick}>@iambogdan</li>
+            <li onClick={handleEmailClick}>codify.software@gmail.com</li>
+          </ul>
+        </footer>
+       </div>
       </div>
     </div>
   );

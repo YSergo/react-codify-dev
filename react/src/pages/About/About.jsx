@@ -5,7 +5,7 @@ import me from "./me.jpeg";
 import Request from "../../components/Request/Request";
 import { useState, useRef, useEffect } from "react";
 import Contacts from "../../components/Contacts/Contacts";
-import slideInStyles from "./slideInFromLeft.module.scss";
+import slideInStyles from "./slideInStyles.module.scss";
 
 function About() {
   useEffect(() => {
