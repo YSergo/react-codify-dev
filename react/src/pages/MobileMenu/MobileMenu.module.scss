@@ -64,7 +64,7 @@
   justify-content: space-between;
   margin-left: 5vw;
   margin-right: 5vw;
-  height: 80vh;
+  height: 92vh;
 }
 
 .menu {
@@ -72,11 +72,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 63vh;
+  height: 66vh;
   width: 100%;
 
   a {
-    margin: 1vw;
+    margin: 0.3vw;
   }
 
   button {
@@ -130,9 +130,8 @@
 }
 
 .footer {
-  margin-top: 1.5rem;
+  margin-top: 2vh;
   padding: 0;
-  margin-bottom: 0.5rem;
   ul {
     display: flex;
     justify-content: space-between;
@@ -146,7 +145,7 @@
     font-family: "Manrope";
     font-style: normal;
     font-weight: 400;
-    line-height: 0;
+    line-height: 1rem;
 
     &:active {
       color: $color-primary;
@@ -156,5 +155,5 @@
 
 .positionBottom {
   position: sticky;
-  bottom: 2vh;
+  bottom: 2.2vh;
 }
