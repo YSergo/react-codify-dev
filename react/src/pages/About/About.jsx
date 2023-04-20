@@ -8,6 +8,10 @@ import Contacts from "../../components/Contacts/Contacts";
 import slideInStyles from "./slideInFromLeft.module.scss";
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const [selectedMember, setSelectedMember] = useState("bt");
 
   const [part1Visible, setPart1Visible] = useState(false);

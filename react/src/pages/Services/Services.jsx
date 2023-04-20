@@ -3,8 +3,13 @@ import Contacts from "../../components/Contacts/Contacts";
 import Request from "../../components/Request/Request";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import ContentLoader from "react-content-loader";
+import { useEffect } from "react";
 
 function Services({ setDrawerOpened, favors, favorsLoading, isMobile }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const renderSkeletons = () => {
     const skeletons = [];
     for (let i = 0; i < 8; i++) {

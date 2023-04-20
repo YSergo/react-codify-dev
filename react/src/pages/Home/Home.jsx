@@ -1,6 +1,11 @@
 import styles from "./Home.module.scss";
+import { useEffect } from "react";
 
 function Home({ setDrawerOpened }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <main className={styles.homePage}>
       <div className={styles.animateRequest }>

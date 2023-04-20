@@ -3,8 +3,13 @@ import Request from "../../components/Request/Request";
 import styles from "./Portfolio.module.scss";
 import PortfolioCard from "../../components/PortfolioCard/PortfolioCard";
 import ContentLoader from "react-content-loader";
+import { useEffect } from "react";
 
 function Portfolio({ projects, projectsLoading, isMobile }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const renderSkeletons = () => {
     const skeletons = [];
     for (let i = 0; i < 4; i++) {
