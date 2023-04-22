@@ -1,5 +1,24 @@
 @import "../../variables.scss";
 
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animateRequest {
+  animation-name: fadeInScale;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+
 .homePage {
   display: flex;
   flex-direction: column;
@@ -22,7 +41,7 @@
     font-weight: 600;
     font-size: 28px;
     line-height: 38px;
-    transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 
     &:hover {
       background-color: $color-hover;
@@ -36,5 +55,43 @@
     line-height: 110px;
     margin: 0;
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 4vw;
+  }
+  .homePage {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 20vh + 9.5vh;
+  
+    button {
+      align-self: flex-start;
+      width: auto;
+      height: auto;
+      cursor: pointer;
+      background-color: $color-primary;
+      border: 0;
+      font-family: "Manrope";
+      padding: 6vw;
+      padding-top: 2vw;
+      padding-bottom: 2vw;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #000000 !important;
+      transition: background-color 0.3s ease-in-out;
+    }
+  
+    h1 {
+      font-family: "Montserrat";
+      font-weight: 600;
+      font-size: 2.5rem;
+      line-height: 3.6rem;
+      margin: 0;
+      margin-bottom: 2rem;
+    }
   }
 }

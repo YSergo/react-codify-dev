@@ -12,7 +12,7 @@ body {
   background: $color-background;
   margin: 0 auto;
   max-width: 1366px;
-  min-width: 1366px;
+  min-width: auto;
 }
 
 * {
@@ -21,7 +21,7 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #000000 !important;
   text-decoration: none;
 }
 

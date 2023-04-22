@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 
 function Request({ onClose, showCloseButton = false }) {
+ 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -94,8 +95,6 @@ function Request({ onClose, showCloseButton = false }) {
         {showCloseButton && (
           <svg
             onClick={onClose}
-            width="24"
-            height="24"
             viewBox="0 0 28 28"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

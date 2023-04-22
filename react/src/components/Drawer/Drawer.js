@@ -1,8 +1,17 @@
 import { useEffect } from "react";
 import styles from "./Drawer.module.scss";
 import Request from "../Request/Request";
+import MobileMenu from "../../pages/MobileMenu/MobileMenu";
 
-function Drawer({ onClose, drawerOpened }) {
+function Drawer({
+  onClose,
+  drawerOpened,
+  origin,
+  setDrawerOpened,
+  setOrigin,
+  setOpenedFromMenu,
+  openedFromMenu,
+}) {
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
@@ -28,7 +37,31 @@ function Drawer({ onClose, drawerOpened }) {
         onClick={(event) => event.stopPropagation()}
         className={`${styles.drawer} ${drawerOpened ? styles.opened : ""}`}
       >
-        <Request onClose={onClose} showCloseButton={true} />
+        {origin !== "HeaderMobile" ? (
+          <div
+            className={styles.animateRequest}
+            key={drawerOpened ? "request" : "request-closed"}
+          >
+            <Request
+              onClose={() => {
+                if (openedFromMenu) {
+                  setOrigin("HeaderMobile");
+                  setOpenedFromMenu(false);
+                } else {
+                  onClose();
+                }
+              }}
+              showCloseButton={true}
+            />
+          </div>
+        ) : (
+          <MobileMenu
+            setOpenedFromMenu={setOpenedFromMenu}
+            onClose={onClose}
+            setDrawerOpened={setDrawerOpened}
+            setOrigin={setOrigin}
+          />
+        )}
       </div>
     </div>
   );

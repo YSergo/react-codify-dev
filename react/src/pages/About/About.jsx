@@ -1,19 +1,59 @@
 import styles from "./About.module.scss";
 import bo from "./bo.jpg";
 import me from "./me.jpeg";
-import kris from "./kris.jpg";
+// import kris from "./kris.jpg";
 import Request from "../../components/Request/Request";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Contacts from "../../components/Contacts/Contacts";
+import slideInStyles from "./slideInStyles.module.scss";
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const [selectedMember, setSelectedMember] = useState("bt");
+
+  const [part1Visible, setPart1Visible] = useState(false);
+  const [part2Visible, setPart2Visible] = useState(false);
+  const [part3Visible, setPart3Visible] = useState(false);
+  const part1Ref = useRef(null);
+  const part2Ref = useRef(null);
+  const part3Ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === part1Ref.current && !part1Visible && entry.isIntersecting) {
+            setPart1Visible(true);
+          } else if (entry.target === part2Ref.current && !part2Visible && entry.isIntersecting) {
+            setPart2Visible(true);
+          } else if (entry.target === part3Ref.current && !part3Visible && entry.isIntersecting) {
+            setPart3Visible(true);
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(part1Ref.current);
+    observer.observe(part2Ref.current);
+    observer.observe(part3Ref.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.description}>
-        <h2>Мы — команда разработчиков</h2>
-        <h2 className={styles.rightAlign}> и дизайнеров,</h2>
+        <div className={styles.container1}>
+          <h2 className={styles.line1}>Мы — команда</h2>
+          <h2 className={styles.line2}>&nbsp;разработчиков</h2>
+          <h2 className={styles.line3}>и дизайнеров,</h2>
+        </div>
         <p>
           которая специализируется на веб-разработке и имеет большой опыт в
           создании высококачественных продуктов для наших клиентов.
@@ -21,7 +61,10 @@ function About() {
       </div>
 
       <div className={styles.description}>
-        <h2>Мы считаем, что наша главная цель — </h2>
+        <div className={styles.container2}>
+          <h2 className={styles.line4}>Мы считаем, что наша</h2>
+          <h2 className={styles.line5}>&nbsp;главная цель — </h2>
+        </div>
         <p className={styles.leftAlign}>
           помочь вашему бизнесу развиваться, <br />
           и поэтому мы всегда стремимся к креативным
@@ -34,7 +77,7 @@ function About() {
       <h2>Наша команда</h2>
       <div className={styles.ourTeam}>
         {selectedMember === "bt" && (
-          <>
+          <div className={styles.memberCardWrapper}>
             <div className={styles.memberCard}>
               <img src={bo} alt="person" />
               <h6>Богдан Топоров</h6>
@@ -48,10 +91,10 @@ function About() {
               или приложения, гарантируя стабильность, эффективность и
               безопасность
             </p>
-          </>
+          </div>
         )}
         {selectedMember === "sy" && (
-          <>
+          <div className={styles.memberCardWrapper}>
             <div className={styles.memberCard}>
               <img src={me} alt="person" />
               <h6>Сергей Якунчихин</h6>
@@ -64,10 +107,10 @@ function About() {
               Тот, кто воплощает дизайн в код, обеспечивая интерактивность и
               функциональность вашего сайта или приложения
             </p>
-          </>
+          </div>
         )}
-        {selectedMember === "kl" && (
-          <>
+        {/* {selectedMember === "kl" && (
+          <div className={styles.memberCardWrapper}>
             <div className={styles.memberCard}>
               <img src={kris} alt="person" />
               <h6>Кристина Николаенко</h6>
@@ -80,8 +123,8 @@ function About() {
               Тот, кто создает визуальный стиль и интерфейс вашего продукта,
               делая его удобным и привлекательным для пользователей
             </p>
-          </>
-        )}
+          </div>
+        )} */}
         <div className={styles.buttons}>
           <button
             className={selectedMember === "bt" ? styles.selected : ""}
@@ -95,30 +138,40 @@ function About() {
           >
             Front-end разработка
           </button>
-          <button
+          {/* <button
             className={selectedMember === "kl" ? styles.selected : ""}
             onClick={() => setSelectedMember("kl")}
           >
             UX/UI дизайн
-          </button>
+          </button> */}
         </div>
       </div>
 
+      <h2 className={styles.principlesTitle}>Наши принципы</h2>
       <div className={styles.principles}>
-        <h2>Наши принципы</h2>
-        <div className={styles.part}>
+        <div
+          ref={part1Ref}
+          className={`${styles.partOpacity0} ${styles.part} ${
+            part1Visible ? slideInStyles.fadeIn : ""
+          }`}
+        >
           <span>01</span>
           <div>
             <h3>Бизнес-ориентированность</h3>
             <p>
-              В первую очередь думаем о бизнесе. Помогаем
+              В первую очередь думаем о бизнесе.
               <br />
-              решить проблемы и поднять показатели.
+              Помогаем решить проблемы и поднять показатели.
             </p>
           </div>
         </div>
 
-        <div className={`${styles.part} ${styles.part2}`}>
+        <div
+          ref={part2Ref}
+          className={`${styles.partOpacity0} ${styles.part} ${styles.part2} ${
+            part2Visible ? slideInStyles.fadeIn : ""
+          }`}
+        >
           <span>02</span>
           <div>
             <h3>Наблюдайте за прогрессом</h3>
@@ -130,7 +183,12 @@ function About() {
           </div>
         </div>
 
-        <div className={`${styles.part} ${styles.part3}`}>
+        <div
+          ref={part3Ref}
+          className={`${styles.partOpacity0} ${styles.part} ${styles.part3} ${
+            part3Visible ? slideInStyles.fadeIn : ""
+          }`}
+        >
           <div>
             <svg
               width="129"

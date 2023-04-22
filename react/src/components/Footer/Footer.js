@@ -7,7 +7,7 @@ import {
 
 function Footer() {
   return (
-    <footer style={styles.footer}>
+    <footer className={styles.footer}>
       <ul>
         <li onClick={handlePhoneClick}>+7 (921) 588-62-02</li>
         <li onClick={handleTelegramClick}>@iambogdan</li>
